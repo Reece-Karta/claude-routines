@@ -118,6 +118,26 @@
       margin-bottom: 4px;
     }
 
+    .email-card .inbox-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 6px;
+    }
+
+    .email-card .inbox-badge.primary {
+      background: #dfe6e9;
+      color: #2d3436;
+    }
+
+    .email-card .inbox-badge.sales {
+      background: #ffeaa7;
+      color: #6c5600;
+    }
+
     .email-card .from {
       font-size: 0.82rem;
       color: #636e72;
@@ -259,7 +279,7 @@
   <header>
     <h1>Email Triage</h1>
     <div class="meta">
-      reece@kartahealthcare.com &middot; <span id="triage-date">17 Jun 2026, 7:00 AM AEST</span>
+      reece@ &amp; sales@kartahealthcare.com &middot; <span id="triage-date">17 Jun 2026, 7:00 AM AEST</span>
     </div>
   </header>
 
@@ -322,6 +342,7 @@
     </div>
 
     <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
       <div class="subject">Example: Server outage affecting patient portal</div>
       <div class="from">From: IT Support &lt;support@kartahealthcare.com&gt;</div>
       <div class="summary">Patient portal has been down since 6:15 AM. IT is investigating but needs approval to restart the production database.</div>
@@ -346,6 +367,7 @@ Reece</div>
     </div>
 
     <div class="email-card">
+      <span class="inbox-badge sales">sales@</span>
       <div class="subject">Example: Q3 budget review — your sign-off required</div>
       <div class="from">From: Finance Team &lt;finance@kartahealthcare.com&gt;</div>
       <div class="summary">Q3 departmental budget is ready for review. They need your approval before Friday's board meeting.</div>
@@ -368,6 +390,7 @@ Reece</div>
     </div>
 
     <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
       <div class="subject">Example: New compliance guidelines published</div>
       <div class="from">From: Compliance &lt;compliance@kartahealthcare.com&gt;</div>
       <div class="summary">Updated clinical data handling guidelines have been published to the intranet. No action required until next audit cycle.</div>
@@ -382,6 +405,7 @@ Reece</div>
     </div>
 
     <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
       <div class="subject">Example: Team lunch next Thursday</div>
       <div class="from">From: Sarah M. &lt;sarah@kartahealthcare.com&gt;</div>
       <div class="summary">Organising a team lunch for next Thursday — asking for venue preferences.</div>

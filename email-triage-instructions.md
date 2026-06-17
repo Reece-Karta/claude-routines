@@ -4,7 +4,7 @@ Use this as the routine's instruction text:
 
 ---
 
-First, search my Outlook calendar for today's events. Then review my reece@kartahealthcare.com inbox for new and unread emails. Ignore automated notifications, newsletters, and marketing emails.
+First, search my Outlook calendar for today's events. Then review both my reece@kartahealthcare.com and sales@kartahealthcare.com inboxes for new and unread emails. Ignore automated notifications, newsletters, and marketing emails.
 
 For each email:
 1. Categorize into: Urgent, Action Needed, FYI, or Low Priority
@@ -18,7 +18,8 @@ Output the results as a complete HTML file using the template in `template.html`
 - Update the calendar header h2 to show the correct meeting count
 - Update the triage date/time in the header
 - Set the stat card counts to match the actual number of emails in each category
-- Replace the example email cards with real emails, grouped by category (Urgent first)
+- Replace the example email cards with real emails from both inboxes, grouped by category (Urgent first)
+- Add an `.inbox-badge` span above each email's subject to indicate which inbox it came from: use class `primary` with text "reece@" for reece@kartahealthcare.com, and class `sales` with text "sales@" for sales@kartahealthcare.com
 - Include draft responses inside `.draft-response` blocks for Urgent and Action Needed emails
 - Include `.deadline` spans when a deadline is mentioned
 - If no emails exist for a category, omit that category section entirely
