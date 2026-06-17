@@ -118,6 +118,26 @@
       margin-bottom: 4px;
     }
 
+    .email-card .inbox-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 6px;
+    }
+
+    .email-card .inbox-badge.primary {
+      background: #dfe6e9;
+      color: #2d3436;
+    }
+
+    .email-card .inbox-badge.sales {
+      background: #ffeaa7;
+      color: #6c5600;
+    }
+
     .email-card .from {
       font-size: 0.82rem;
       color: #636e72;
@@ -162,6 +182,81 @@
       white-space: pre-wrap;
     }
 
+    .calendar {
+      margin-bottom: 28px;
+    }
+
+    .calendar-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .calendar-header .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #fff;
+      background: #6c5ce7;
+    }
+
+    .calendar-header h2 {
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .meeting-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 14px 20px;
+      margin-bottom: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      border-left: 4px solid #6c5ce7;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .meeting-card .meeting-time {
+      flex-shrink: 0;
+      min-width: 100px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #6c5ce7;
+      padding-top: 1px;
+    }
+
+    .meeting-card .meeting-details {
+      flex: 1;
+    }
+
+    .meeting-card .meeting-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 3px;
+    }
+
+    .meeting-card .meeting-meta {
+      font-size: 0.82rem;
+      color: #636e72;
+      line-height: 1.4;
+    }
+
+    .calendar-empty {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      color: #636e72;
+      font-size: 0.9rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+
     .empty-state {
       text-align: center;
       padding: 48px 24px;
@@ -169,9 +264,21 @@
       font-size: 1.1rem;
     }
 
+    .access-notice {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 24px;
+      font-size: 0.85rem;
+      color: #856404;
+    }
+
     @media (max-width: 600px) {
       body { padding: 16px; }
       .stats { grid-template-columns: repeat(2, 1fr); }
+      .meeting-card { flex-direction: column; gap: 4px; }
+      .meeting-card .meeting-time { min-width: auto; }
     }
   </style>
 </head>
@@ -180,9 +287,13 @@
   <header>
     <h1>Email Triage</h1>
     <div class="meta">
-      reece@kartahealthcare.com &middot; <span id="triage-date">17 Jun 2026, 3:45 PM AEST</span>
+      reece@ &amp; sales@kartahealthcare.com &middot; <span id="triage-date">17 Jun 2026, 12:06 PM AEST</span>
     </div>
   </header>
+
+  <div class="access-notice">
+    &#9888; Unable to access the <strong>sales@kartahealthcare.com</strong> mailbox &mdash; delegate access is not configured or the Inbox folder is inaccessible. Only <strong>reece@kartahealthcare.com</strong> emails are shown below.
+  </div>
 
   <div class="stats">
     <div class="stat-card urgent">
@@ -190,16 +301,32 @@
       <div class="label">Urgent</div>
     </div>
     <div class="stat-card action">
-      <div class="count" id="count-action">3</div>
+      <div class="count" id="count-action">5</div>
       <div class="label">Action Needed</div>
     </div>
     <div class="stat-card fyi">
-      <div class="count" id="count-fyi">1</div>
+      <div class="count" id="count-fyi">4</div>
       <div class="label">FYI</div>
     </div>
     <div class="stat-card low">
-      <div class="count" id="count-low">3</div>
+      <div class="count" id="count-low">1</div>
       <div class="label">Low Priority</div>
+    </div>
+  </div>
+
+  <!-- CALENDAR -->
+  <div class="calendar">
+    <div class="calendar-header">
+      <span class="badge">Today's Schedule</span>
+      <h2>1 meeting</h2>
+    </div>
+
+    <div class="meeting-card">
+      <div class="meeting-time">3:00 &ndash; 3:45 PM</div>
+      <div class="meeting-details">
+        <div class="meeting-title">Karta + Mjolner Fortnightly Update</div>
+        <div class="meeting-meta">Microsoft Teams &middot; Matt Cramsie, Martin Wang</div>
+      </div>
     </div>
   </div>
 
@@ -211,21 +338,16 @@
     </div>
 
     <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
       <div class="subject">FHP PO 2960576</div>
-      <div class="from">From: Katlynn Lewis &lt;klewis@firstproducts.com&gt; &middot; 17 Jun 2026, 5:38 AM AEST</div>
-      <div class="summary">New purchase order from First Products attached. Katlynn is requesting you review the PO and confirm pricing and delivery within 24 hours &mdash; this deadline has now passed or is imminent.</div>
-      <span class="deadline">&#9200; Deadline: Within 24 hours of receipt (by 17 Jun 5:38 AM AEST &mdash; overdue)</span>
+      <div class="from">From: Katlynn Lewis &lt;klewis@firstproducts.com&gt; &middot; 17 Jun, 5:38 AM AEST</div>
+      <div class="summary">New purchase order from FIRST Products with attached PO. Requests review of pricing and delivery confirmation within 24 hours.</div>
+      <span class="deadline">&#9200; Deadline: Within 24 hours (by 18 Jun)</span>
       <div class="draft-response">
         <div class="draft-label">Draft Response</div>
         <div class="draft-text">Hi Katlynn,
 
-Thank you for sending through PO 2960576. Apologies for the slight delay in getting back to you.
-
-I have reviewed the PO and can confirm the following:
-- Pricing: [confirm or note any discrepancies]
-- Estimated delivery: [confirm lead time]
-
-Please let me know if you need anything else to proceed.
+Thank you for sending through PO 2960576. I have received the attached PO and will review the pricing and delivery details today. I will have confirmation back to you within the next few hours.
 
 Kind regards,
 Reece</div>
@@ -241,18 +363,19 @@ Reece</div>
     </div>
 
     <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
       <div class="subject">FIRST PRODUCTS &ndash; meet Katlynn</div>
-      <div class="from">From: Kim Marone &lt;kmarone@firstproducts.com&gt; &middot; 13 Jun 2026, 5:07 AM AEST</div>
-      <div class="summary">Kim is introducing Katlynn Lewis as the new buyer handling orders from First Products. She needs your W-9 and standard vendor setup documentation to get Karta registered as a supplier. Kim also asks whether you have a credit card payment portal.</div>
+      <div class="from">From: Kim Marone &lt;kmarone@firstproducts.com&gt; &middot; 13 Jun, 5:07 AM AEST</div>
+      <div class="summary">Kim introduces buyer Katlynn Lewis who will handle orders from Karta. Needs W-9 and vendor setup documents sent over ASAP. Also asks if you have a credit card payment portal/link. Confirms order for items 1 &amp; 2 from quote, $60 freight, ~1 week lead time.</div>
       <div class="draft-response">
         <div class="draft-label">Draft Response</div>
         <div class="draft-text">Hi Kim and Katlynn,
 
-Great to connect. Welcome aboard, Katlynn.
+Thanks for the introduction. I will get the W-9 and vendor setup documentation sent through to Katlynn shortly.
 
-I will get the W-9 and vendor setup documentation sent through to you shortly. Regarding a credit card portal, we do have that available and I will share the link with Katlynn directly.
+Regarding the credit card portal, I will have our team send through the payment link.
 
-To confirm on Item #1 from the quote &mdash; yes, the state of charge indicator and coiled power cord from the unit to wall are included.
+To confirm on the order: items 1 and 2 from the quote, $60 freight, approximately 1 week lead time. And yes, item #1 includes the state of charge indicator and coiled power cord from the unit to wall.
 
 Kind regards,
 Reece</div>
@@ -260,17 +383,54 @@ Reece</div>
     </div>
 
     <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
+      <div class="subject">Re: Accessory Rail Finalization</div>
+      <div class="from">From: Martin Wang &lt;maw@bymjolner.com&gt; &middot; 16 Jun, 6:39 PM AEST</div>
+      <div class="summary">Martin (Mjolner) responds to accessory rail questions. Texture change on M092 end cap (USD $310) and M094 scanner bracket (USD $280) is feasible via tooling modifications. Updated packaging spreadsheet attached for review before formal quotation is issued.</div>
+      <div class="draft-response">
+        <div class="draft-label">Draft Response</div>
+        <div class="draft-text">Hi Marty,
+
+Thanks for this, and I hope your mother is recovering well.
+
+The tooling modification costs for M092 ($310) and M094 ($280) look fine to me. I will review the updated Excel file and revert with any comments. If all is in order, please go ahead and issue the formal quotation.
+
+Kind regards,
+Reece</div>
+      </div>
+    </div>
+
+    <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
+      <div class="subject">Re: Karta.NX Items for quoting</div>
+      <div class="from">From: David Hsieh, Sigma-Care &lt;export@sigmabed.com&gt; &middot; 15 Jun, 1:18 PM AEST</div>
+      <div class="summary">Sigma-Care provides preliminary OEM cart pricing at approximately USD $400&ndash;$420 per unit. This is a rough estimate pending tooling drawings. They are confident the worktop bending issue can be resolved (likely insufficient packing pressure). Aluminium parts quote still underway.</div>
+      <div class="draft-response">
+        <div class="draft-label">Draft Response</div>
+        <div class="draft-text">Hi David,
+
+Thanks for the preliminary pricing. The USD $400-420 range for the complete cart is noted and is a useful reference point at this stage.
+
+We understand this is a rough estimate and will work on getting the tooling drawings across to you so a precise final quote can be prepared. Good to hear the worktop bending issue is likely resolvable.
+
+Best regards,
+Reece</div>
+      </div>
+    </div>
+
+    <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
       <div class="subject">R&amp;D FY26 &ndash; Preparation &amp; Eligibility Review</div>
-      <div class="from">From: Susan Elson &lt;susan@radbe.com.au&gt; &middot; 12 Jun 2026, 1:26 PM AEST</div>
-      <div class="summary">RADBE Consulting is commencing FY26 R&amp;D claim preparation. With roughly 2 weeks until lodgement opens, Susan is asking whether Karta Healthcare has any eligible projects to review while details are still fresh.</div>
-      <span class="deadline">&#9200; Deadline: ~2 weeks until R&amp;D lodgement opens (late June 2026)</span>
+      <div class="from">From: Susan Elson, RADBE Consulting &lt;susan@radbe.com.au&gt; &middot; 12 Jun, 1:26 PM AEST</div>
+      <div class="summary">RADBE Consulting is commencing preparation for FY26 R&amp;D tax claims. With approximately 2 weeks until lodgement opens, they are inviting review of any potentially eligible projects while details are fresh.</div>
+      <span class="deadline">&#9200; Deadline: ~2 weeks until R&amp;D lodgement opens (~1 Jul)</span>
       <div class="draft-response">
         <div class="draft-label">Draft Response</div>
         <div class="draft-text">Hi Susan,
 
-Thanks for the heads-up. We do have a number of active development projects at Karta Healthcare that may be eligible &mdash; including our Karta.NX supplier transition work and new product development on the Karta.JR line.
+Thanks for reaching out. We do have some eligible R&D projects at Karta Healthcare for FY26 that we would like reviewed. Happy to regroup and go through them with you in the coming week.
 
-Happy to schedule a call this week to walk through the details. Please let me know your availability.
+I will coordinate with Murray and Audrey on timing.
 
 Kind regards,
 Reece</div>
@@ -278,18 +438,20 @@ Reece</div>
     </div>
 
     <div class="email-card">
-      <div class="subject">FW: Tangent Medical Carts</div>
-      <div class="from">From: Kareem Sherif &lt;KareemS@tangent.com&gt; &middot; 10 Jun 2026, 12:18 AM AEST</div>
-      <div class="summary">Kareem reports that Hammondcare is likely to place an order soon. He is asking whether someone from Karta can help arrange pickup or return of the demo carts currently with the customer.</div>
+      <span class="inbox-badge primary">reece@</span>
+      <div class="subject">RE: X5 Questions &ndash; Answers</div>
+      <div class="from">From: Leon Adams, Ultralife &lt;ladams@SWE.com&gt; &middot; 12 Jun, 2:12 AM AEST</div>
+      <div class="summary">Leon confirms the X5 SuperLite &ldquo;noise&rdquo; is normal USB-C power negotiation behaviour and Ultralife will not make changes. All X5 AC stock is earmarked for the Debetrek Australia ocean shipment (~30 Jun), but Ultralife can divert some units to Karta Houston if needed for pending US sales.</div>
+      <span class="deadline">&#9200; Stock decision needed before 30 Jun shipment</span>
       <div class="draft-response">
         <div class="draft-label">Draft Response</div>
-        <div class="draft-text">Hi Kareem,
+        <div class="draft-text">Hi Leon,
 
-Thanks for the update &mdash; great to hear Hammondcare is moving forward.
+Thanks for the detailed feedback on the noise issue. That is very helpful and good to know it is confirmed as normal operation. We will update our documentation accordingly.
 
-I will coordinate with Eamonn on the demo cart pickup and get back to you with a plan shortly.
+Regarding the X5 AC stock, yes please divert some units to Karta Houston from the planned Debetrek shipment. I have pending US orders to fulfil and will confirm the exact quantity shortly.
 
-Cheers,
+Kind regards,
 Reece</div>
       </div>
     </div>
@@ -303,9 +465,31 @@ Reece</div>
     </div>
 
     <div class="email-card">
-      <div class="subject">Re: Karta.NX Items for quoting</div>
-      <div class="from">From: David Hsieh, Sigma-Care &lt;export@sigmabed.com&gt; &middot; 15 Jun 2026, 1:18 PM AEST</div>
-      <div class="summary">Sigma-Care has provided a preliminary estimate of USD 400&ndash;420 per cart for the Karta.NX OEM project. This is a rough figure pending tooling drawings; they are also still evaluating aluminum parts. Matt and James are the primary recipients &mdash; you are CC'd.</div>
+      <span class="inbox-badge primary">reece@</span>
+      <div class="subject">RE: New Brunswick Container Price</div>
+      <div class="from">From: Kareem Sherif, Tangent &lt;KareemS@tangent.com&gt; &middot; 17 Jun, 2:25 AM AEST</div>
+      <div class="summary">Kareem has looped in Bryce and the BTX logistics team with Kevin Nelson's contact details (506-474-3446) to coordinate the New Brunswick container delivery. This should resolve the earlier chain of failed delivery attempts.</div>
+    </div>
+
+    <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
+      <div class="subject">Re: Marketing Email Blocked</div>
+      <div class="from">From: Mark &lt;Mark@debetrek.com.au&gt; &middot; 12 Jun, 10:01 AM AEST</div>
+      <div class="summary">IT has unblocked the email address but warns that 26% of outbound messages (756 of 2,848) were flagged as suspicious in the last 24 hours. Risk of being locked out again if the rate continues.</div>
+    </div>
+
+    <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
+      <div class="subject">RE: Taiwan Battery</div>
+      <div class="from">From: Peter Hart, DPI &lt;peter@dpiltd.co.nz&gt; &middot; 12 Jun, 9:10 AM AEST</div>
+      <div class="summary">Peter is asking about the battery pack design &mdash; unclear how the packs daisy-chain, concerned about aesthetics, and requesting photos from the supplier.</div>
+    </div>
+
+    <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
+      <div class="subject">Taiwan Battery (internal update)</div>
+      <div class="from">From: James &lt;james@kartahealthcare.com&gt; &middot; 12 Jun, 7:25 AM AEST</div>
+      <div class="summary">James provides battery specs update: old version sheet is for the Simplifi EVA model, new one is for ENV. Single pack capacity is 409.6Wh, and Simplifi uses 3 packs. Suggests arranging a meeting with Apack for more details.</div>
     </div>
   </div>
 
@@ -317,21 +501,10 @@ Reece</div>
     </div>
 
     <div class="email-card">
-      <div class="subject">Matt's Role &ndash; Expanded Design &amp; Marketing Proposal</div>
-      <div class="from">From: Matt Cramsie &lt;matt@kartahealthcare.com&gt; &middot; 19 Apr 2026, 10:58 PM AEST</div>
-      <div class="summary">Matt proposes expanding his role from part-time design to full-time design + marketing at $16,000/month on a 12-month term. Includes a quarterly deliverables roadmap and Karta.NX supplier transition oversight. Sent ahead of a board meeting in April &mdash; likely already discussed.</div>
-    </div>
-
-    <div class="email-card">
-      <div class="subject">Re: HIMSS Return + NY Sample Carts</div>
-      <div class="from">From: Ann Kelley &lt;akelley@SWE.com&gt; &middot; 2 Apr 2026, 7:32 AM AEST</div>
-      <div class="summary">Ann at SWE (Houston) has technical questions about the sample cart assembly &mdash; specifically which URB kits to install, where the SOCI bracket mounts, and which USB connection the SOCI uses. Over 2 months old and likely stale.</div>
-    </div>
-
-    <div class="email-card">
-      <div class="subject">New Customer Setup with Credit Terms</div>
-      <div class="from">From: Janelle Ho &lt;JanelleH@tangent.com&gt; &middot; 7 Feb 2026, 3:31 AM AEST</div>
-      <div class="summary">Tangent's accounting team (referred by Kareem Sherif) is requesting a credit application and supporting documentation to set up Karta as a vendor. Over 4 months old &mdash; check whether Eamonn has already actioned this.</div>
+      <span class="inbox-badge primary">reece@</span>
+      <div class="subject">RE: Following Computex 2026</div>
+      <div class="from">From: Robert Hung, Formosan/FUCO &lt;roberthung@formosan.com&gt; &middot; 12 Jun, 4:32 PM AEST</div>
+      <div class="summary">FUCO is following up after Computex offering one-stop battery pack design and development services. Awaiting detailed requirements if you plan to develop a new pack or modify an existing one.</div>
     </div>
   </div>
 
