@@ -162,6 +162,81 @@
       white-space: pre-wrap;
     }
 
+    .calendar {
+      margin-bottom: 28px;
+    }
+
+    .calendar-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .calendar-header .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #fff;
+      background: #6c5ce7;
+    }
+
+    .calendar-header h2 {
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .meeting-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 14px 20px;
+      margin-bottom: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      border-left: 4px solid #6c5ce7;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .meeting-card .meeting-time {
+      flex-shrink: 0;
+      min-width: 100px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #6c5ce7;
+      padding-top: 1px;
+    }
+
+    .meeting-card .meeting-details {
+      flex: 1;
+    }
+
+    .meeting-card .meeting-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 3px;
+    }
+
+    .meeting-card .meeting-meta {
+      font-size: 0.82rem;
+      color: #636e72;
+      line-height: 1.4;
+    }
+
+    .calendar-empty {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      color: #636e72;
+      font-size: 0.9rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+
     .empty-state {
       text-align: center;
       padding: 48px 24px;
@@ -172,6 +247,8 @@
     @media (max-width: 600px) {
       body { padding: 16px; }
       .stats { grid-template-columns: repeat(2, 1fr); }
+      .meeting-card { flex-direction: column; gap: 4px; }
+      .meeting-card .meeting-time { min-width: auto; }
     }
   </style>
 </head>
@@ -202,6 +279,38 @@
     <div class="stat-card low">
       <div class="count" id="count-low">4</div>
       <div class="label">Low Priority</div>
+    </div>
+  </div>
+
+  <!-- CALENDAR -->
+  <div class="calendar">
+    <div class="calendar-header">
+      <span class="badge">Today's Schedule</span>
+      <h2>3 meetings</h2>
+    </div>
+
+    <div class="meeting-card">
+      <div class="meeting-time">9:00 – 9:30</div>
+      <div class="meeting-details">
+        <div class="meeting-title">Example: Daily standup</div>
+        <div class="meeting-meta">Teams &middot; Dev Team</div>
+      </div>
+    </div>
+
+    <div class="meeting-card">
+      <div class="meeting-time">11:00 – 12:00</div>
+      <div class="meeting-details">
+        <div class="meeting-title">Example: Q3 planning review</div>
+        <div class="meeting-meta">Room 4B &middot; Sarah M., James K., Finance Team</div>
+      </div>
+    </div>
+
+    <div class="meeting-card">
+      <div class="meeting-time">14:30 – 15:00</div>
+      <div class="meeting-details">
+        <div class="meeting-title">Example: 1:1 with Sarah</div>
+        <div class="meeting-meta">Teams</div>
+      </div>
     </div>
   </div>
 

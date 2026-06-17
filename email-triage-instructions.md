@@ -4,7 +4,7 @@ Use this as the routine's instruction text:
 
 ---
 
-Review my reece@kartahealthcare.com inbox for new and unread emails. Ignore automated notifications, newsletters, and marketing emails.
+First, search my Outlook calendar for today's events. Then review my reece@kartahealthcare.com inbox for new and unread emails. Ignore automated notifications, newsletters, and marketing emails.
 
 For each email:
 1. Categorize into: Urgent, Action Needed, FYI, or Low Priority
@@ -13,6 +13,9 @@ For each email:
 4. Draft a response for any emails marked Urgent or Action Needed
 
 Output the results as a complete HTML file using the template in `template.html` in this repository. Specifically:
+- Populate the calendar section with today's meetings, showing time, title, location, and attendees
+- If there are no meetings, replace the meeting cards with a `.calendar-empty` div saying "No meetings today"
+- Update the calendar header h2 to show the correct meeting count
 - Update the triage date/time in the header
 - Set the stat card counts to match the actual number of emails in each category
 - Replace the example email cards with real emails, grouped by category (Urgent first)
