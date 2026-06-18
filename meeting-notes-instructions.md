@@ -4,11 +4,11 @@ Use this as the routine's instruction text:
 
 ---
 
-Export all of my meeting notes from Granola for today and save them as markdown files in the `meeting-notes/` folder in this repository.
+Export all of my recent meeting notes from Granola and save them as markdown files in the `meeting-notes/` folder in this repository.
 
 ## Steps
 
-1. Use the Granola `list_meetings` tool to fetch meetings from `this_week`, then filter to today's date only
+1. Use the Granola `list_meetings` tool to fetch meetings from `last_30_days`
 2. For each meeting found, use `get_meetings` to retrieve the full details (summary, attendees, metadata)
 3. If any meetings have generic titles like "New note", use `get_meeting_transcript` to get the transcript and generate a descriptive title from the content
 
@@ -55,8 +55,9 @@ Each file should follow this format:
 
 Rules:
 - Create the `meeting-notes/` directory if it doesn't exist
+- Skip any meetings that already have a corresponding file in `meeting-notes/` (avoid duplicates)
 - If a meeting has no action items or decisions, omit those sections
-- If there are no meetings for today, do nothing (don't create empty files)
+- If there are no new meetings to export, do nothing
 - One file per meeting
 
 After writing the files, commit and push to the main branch with the message "Add meeting notes — [date]".
