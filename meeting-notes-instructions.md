@@ -4,7 +4,7 @@ Use this as the routine's instruction text:
 
 ---
 
-Export all of my meeting notes from Granola for today and save them as a formatted HTML dashboard in this repository.
+Export all of my meeting notes from Granola for today and save them as markdown files in the `meeting-notes/` folder in this repository.
 
 ## Steps
 
@@ -21,16 +21,42 @@ For each meeting, extract:
 
 ## Output
 
-Generate a complete HTML file using the template in `meeting-notes-template.html` in this repository. Specifically:
+Save each meeting as a separate markdown file in the `meeting-notes/` folder. Use the naming convention:
 
-- Set the export date in the header to today's date
-- Update the stat card counts to reflect actual totals (meetings, action items, decisions)
-- Replace the example meeting card with real meetings from Granola
-- Each meeting gets its own `.meeting-card` inside a `.meeting-section`
-- Populate attendee chips with actual participants
-- List action items with owner names where known
-- List key decisions in decision items
-- If there are no meetings for today, show a single `.empty-state` div saying "No meetings recorded today"
-- If a meeting has no action items or decisions, omit those subsections for that meeting
+```
+meeting-notes/YYYY-MM-DD-meeting-title-slugified.md
+```
 
-Write the output to `meeting-notes.html` in this repository, then commit and push to the main branch with the message "Update meeting notes export — [date]".
+For example: `meeting-notes/2026-06-18-seo-strategy-review-with-jeff.md`
+
+Each file should follow this format:
+
+```markdown
+# Meeting Title
+
+**Date:** 18 Jun 2026, 9:00 AM
+**Attendees:** Reece Munro, Jeff K.
+
+## Summary
+
+- Bullet point summary of the meeting
+- Key topics discussed
+
+## Action Items
+
+- [ ] **Reece:** Send updated proposal by Wednesday
+- [ ] **Jeff:** Prepare pricing comparison
+
+## Key Decisions
+
+- Approved $5K monthly SEO budget starting July 1
+- Agreed to target US and Canada markets first
+```
+
+Rules:
+- Create the `meeting-notes/` directory if it doesn't exist
+- If a meeting has no action items or decisions, omit those sections
+- If there are no meetings for today, do nothing (don't create empty files)
+- One file per meeting
+
+After writing the files, commit and push to the main branch with the message "Add meeting notes — [date]".
