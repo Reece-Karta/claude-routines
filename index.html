@@ -32,16 +32,6 @@
       color: #636e72;
     }
 
-    .access-notice {
-      background: #ffeaa7;
-      border-radius: 8px;
-      padding: 10px 16px;
-      margin-bottom: 20px;
-      font-size: 0.85rem;
-      color: #6c5600;
-      border-left: 4px solid #fdcb6e;
-    }
-
     .stats {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -274,6 +264,16 @@
       font-size: 1.1rem;
     }
 
+    .access-notice {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-size: 0.82rem;
+      color: #856404;
+      margin-bottom: 20px;
+    }
+
     @media (max-width: 600px) {
       body { padding: 16px; }
       .stats { grid-template-columns: repeat(2, 1fr); }
@@ -287,12 +287,12 @@
   <header>
     <h1>Email Triage</h1>
     <div class="meta">
-      reece@ &amp; sales@kartahealthcare.com &middot; <span id="triage-date">18 Jun 2026, 7:51 AM AEST</span>
+      reece@ &amp; sales@kartahealthcare.com &middot; <span id="triage-date">18 Jun 2026, 7:05 AM AEST</span>
     </div>
   </header>
 
   <div class="access-notice">
-    &#9888; <strong>sales@kartahealthcare.com</strong> &mdash; Access denied. Unable to read the sales inbox (delegate/shared mailbox permissions not available). Only reece@ emails are shown below.
+    Note: Unable to access the sales@kartahealthcare.com shared mailbox (delegate access denied). The emails below are from reece@kartahealthcare.com only. 2 automated/marketing emails were filtered out (BTX Invoicing, PandaDoc SEO proposal).
   </div>
 
   <div class="stats">
@@ -301,15 +301,15 @@
       <div class="label">Urgent</div>
     </div>
     <div class="stat-card action">
-      <div class="count" id="count-action">4</div>
+      <div class="count" id="count-action">7</div>
       <div class="label">Action Needed</div>
     </div>
     <div class="stat-card fyi">
-      <div class="count" id="count-fyi">4</div>
+      <div class="count" id="count-fyi">3</div>
       <div class="label">FYI</div>
     </div>
     <div class="stat-card low">
-      <div class="count" id="count-low">1</div>
+      <div class="count" id="count-low">2</div>
       <div class="label">Low Priority</div>
     </div>
   </div>
@@ -318,16 +318,9 @@
   <div class="calendar">
     <div class="calendar-header">
       <span class="badge">Today's Schedule</span>
-      <h2>1 meeting</h2>
+      <h2>0 meetings</h2>
     </div>
-
-    <div class="meeting-card">
-      <div class="meeting-time">8:00 &ndash; 9:00 AM</div>
-      <div class="meeting-details">
-        <div class="meeting-title">Ultralife + Karta Catchup</div>
-        <div class="meeting-meta">Microsoft Teams &middot; Jason Miles (Ultralife)</div>
-      </div>
-    </div>
+    <div class="calendar-empty">No meetings today</div>
   </div>
 
   <!-- URGENT -->
@@ -339,17 +332,19 @@
 
     <div class="email-card">
       <span class="inbox-badge primary">reece@</span>
-      <div class="subject">Reminder: Karta Healthcare &ndash; RADBE Consulting &ndash; Letter of Engagement (via DocuSign)</div>
-      <div class="from">From: RADBE Consulting via DocuSign &lt;dse@aumail.docusign.net&gt; &middot; 18 Jun, 12:03 AM AEST</div>
-      <div class="summary">DocuSign reminder to review and sign RADBE Consulting's Letter of Engagement for financial advisory and consulting services. This is a follow-up reminder, meaning the original document has been pending signature.</div>
-      <span class="deadline">&#9200; Overdue &mdash; pending signature (reminder sent)</span>
+      <div class="subject">R&amp;D FY26 &ndash; Preparation &amp; Eligibility Review</div>
+      <div class="from">From: Susan Elson &lt;susan@radbe.com.au&gt; &middot; 12 Jun 2026</div>
+      <div class="summary">RADBE Consulting is commencing preparation for FY26 R&amp;D tax claims and asking whether Karta Healthcare has eligible projects to review before lodgement opens.</div>
+      <span class="deadline">&#9200; Deadline: Lodgement opens ~26 Jun 2026 &mdash; respond this week</span>
       <div class="draft-response">
         <div class="draft-label">Draft Response</div>
-        <div class="draft-text">Hi,
+        <div class="draft-text">Hi Susan,
 
-Thank you for the reminder. I will review and sign the Letter of Engagement via DocuSign today.
+Thank you for the reminder. Yes, we do have projects at Karta Healthcare that we would like reviewed for a potential FY26 claim.
 
-Kind regards,
+Could we schedule a call this week to walk through the eligible activities? I can arrange access to the financials as needed.
+
+Regards,
 Reece</div>
       </div>
     </div>
@@ -364,32 +359,32 @@ Reece</div>
 
     <div class="email-card">
       <span class="inbox-badge primary">reece@</span>
-      <div class="subject">FW: FHP PO 2960576</div>
-      <div class="from">From: Kim Marone &lt;kmarone@firstproducts.com&gt; &middot; 17 Jun, 9:23 PM AEST</div>
-      <div class="summary">Kim acknowledged your order confirmation and revised invoice for PO 2960576, and is now requesting shipping tracking information once the order ships. Note: Katlynn Lewis (buyer) is OOO until 18 Jun.</div>
+      <div class="subject">RE: Computex Taipei &ndash; TMS2700 Price Correction</div>
+      <div class="from">From: Hans Ling &lt;hans.ling@mactrongroup.com&gt; &middot; 18 Jun 2026</div>
+      <div class="summary">Hans corrected the TMS2700 pricing upward: GSP US$1,295 / MOQ 100 US$1,245 / MOQ 300 US$1,195 (previously quoted at US$1,095/1,045/995 in the initial email).</div>
       <div class="draft-response">
         <div class="draft-label">Draft Response</div>
-        <div class="draft-text">Hi Kim,
+        <div class="draft-text">Hi Hans,
 
-Thanks for confirming. The order is being processed and we expect to ship within the next day or two. I will send through the tracking details as soon as the shipment is dispatched.
+Thank you for the correction on the TMS2700 pricing. Noted. I will review the updated figures alongside the other product quotes and come back to you shortly.
 
-Kind regards,
+Regards,
 Reece</div>
       </div>
     </div>
 
     <div class="email-card">
       <span class="inbox-badge primary">reece@</span>
-      <div class="subject">Gas leg</div>
-      <div class="from">From: Martin Wang &lt;maw@bymjolner.com&gt; &middot; 17 Jun, 2:26 PM AEST</div>
-      <div class="summary">Martin documented the gas leg specifications agreed during your Shanghai office visit and needs you to verify against your records. Covers Karta NX &amp; JR LCD (103&times;103mm extrusion, 3-stage roller, 600&ndash;1020mm height, 420mm stroke) and JR Laptop (90&times;90mm, 2-stage slider).</div>
+      <div class="subject">RE: Computex Taipei &ndash; Full 4-Product Quote</div>
+      <div class="from">From: Hans Ling &lt;hans.ling@mactrongroup.com&gt; &middot; 18 Jun 2026</div>
+      <div class="summary">Mactron provided pricing for all four requested medical-grade products: WMR2387 (US$2,245 at MOQ 300), WMP1567 (US$1,945), TMS2380 (US$995), TMS2700 (US$995). PDF pricing structures attached. Also requesting current vendor/pricing info for SPP negotiation.</div>
       <div class="draft-response">
         <div class="draft-label">Draft Response</div>
-        <div class="draft-text">Hi Martin,
+        <div class="draft-text">Hi Hans,
 
-Thanks for documenting these specs. I will cross-check against my records and confirm any discrepancies.
+Thank you for providing the detailed pricing across all four products. I will review these alongside our internal requirements and revert with any questions. We remain interested in arranging samples once pricing is confirmed.
 
-Kind regards,
+Regards,
 Reece</div>
       </div>
     </div>
@@ -397,17 +392,50 @@ Reece</div>
     <div class="email-card">
       <span class="inbox-badge primary">reece@</span>
       <div class="subject">Re: Accessory Rail Finalization</div>
-      <div class="from">From: Martin Wang &lt;maw@bymjolner.com&gt; &middot; 16 Jun, 6:39 PM AEST</div>
-      <div class="summary">Martin replied to your accessory rail questions: plastic texture change is feasible with tooling modifications (end cap M092 USD 310, scanner bracket M094 USD 280). Packaging requirements noted. Attached an updated Excel with corrections &mdash; awaiting your confirmation to issue a formal quotation.</div>
+      <div class="from">From: Martin Wang &lt;maw@bymjolner.com&gt; &middot; 18 Jun 2026</div>
+      <div class="summary">Martin sent the finalised pricing and MOQ spreadsheet for the Karta Accessory Rail System. Also confirmed new shipping address for the replacement cable cover. Mjolner office closed 19 Jun for Dragon Boat Festival, reopens 22 Jun.</div>
+      <span class="deadline">&#9200; Note: Mjolner closed 19 Jun, reopens Mon 22 Jun</span>
       <div class="draft-response">
         <div class="draft-label">Draft Response</div>
         <div class="draft-text">Hi Martin,
 
-I hope your mother is recovering well after her surgery.
+Thank you for sending through the pricing and MOQ information. I will review the spreadsheet and come back to you after the holiday.
 
-Thank you for the detailed replies and the updated Excel. The tooling modification costs for the end cap (USD 310) and scanner bracket (USD 280) are noted. I will review the spreadsheet and confirm so you can proceed with the formal quotation.
+Regarding the cable cover, I will confirm the shipping address with Matt and follow up.
 
-Kind regards,
+Regards,
+Reece</div>
+      </div>
+    </div>
+
+    <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
+      <div class="subject">Gas leg</div>
+      <div class="from">From: Martin Wang &lt;maw@bymjolner.com&gt; &middot; 17 Jun 2026</div>
+      <div class="summary">Martin is asking Reece to verify the agreed gas leg specifications for Karta NX &amp; JR LCD (3-stage, 103x103mm extrusion, 600&ndash;1020mm range, 420mm stroke) and Karta JR Laptop (2-stage, 90x90mm extrusion) against his own records.</div>
+      <div class="draft-response">
+        <div class="draft-label">Draft Response</div>
+        <div class="draft-text">Hi Martin,
+
+Thanks for summarising the gas leg specifications. I will cross-check these against our records and confirm any discrepancies.
+
+Regards,
+Reece</div>
+      </div>
+    </div>
+
+    <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
+      <div class="subject">Re: New Brunswick Container Price</div>
+      <div class="from">From: Kareem Sherif &lt;KareemS@tangent.com&gt; &middot; 18 Jun 2026</div>
+      <div class="summary">Kareem (Tangent) confirms the New Brunswick container prices have been received and is looking forward to Karta's feedback and any questions.</div>
+      <div class="draft-response">
+        <div class="draft-label">Draft Response</div>
+        <div class="draft-text">Hi Kareem,
+
+Thanks for sharing this. I will review the container pricing and provide our feedback shortly.
+
+Regards,
 Reece</div>
       </div>
     </div>
@@ -415,17 +443,31 @@ Reece</div>
     <div class="email-card">
       <span class="inbox-badge primary">reece@</span>
       <div class="subject">Re: Karta.NX Items for quoting</div>
-      <div class="from">From: Sigma-Care / David Hsieh &lt;export@sigmabed.com&gt; &middot; 15 Jun, 1:18 PM AEST</div>
-      <div class="summary">Sigma-Care provided a preliminary OEM estimate of USD 400&ndash;420 per Karta.NX cart. This is a rough figure based on physical samples only &mdash; they need the tooling drawings (mold design drawings) for plastic and aluminium die-casting parts to issue a final quote.</div>
+      <div class="from">From: Sigma-Care / David Hsieh &lt;export@sigmabed.com&gt; &middot; 15 Jun 2026</div>
+      <div class="summary">Sigma-Care provided a preliminary OEM cart estimate of USD 400&ndash;420 per unit, but notes this is rough without tooling drawings. Final pricing pending receipt of mold design drawings from Karta.</div>
       <div class="draft-response">
         <div class="draft-label">Draft Response</div>
         <div class="draft-text">Hi David,
 
-Thank you for the preliminary estimate. The USD 400-420 range is a useful starting point and we understand the limitations without tooling drawings at this stage.
+Thank you for the preliminary estimate. The USD 400-420 range is a useful starting point. We will work on providing the tooling drawings so you can refine the pricing to a final quote.
 
-We will coordinate internally to get the relevant drawings across to you so a final quote can be prepared.
+Regards,
+Reece</div>
+      </div>
+    </div>
 
-Kind regards,
+    <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
+      <div class="subject">FW: Tangent Medical Carts &ndash; Hammondcare</div>
+      <div class="from">From: Kareem Sherif &lt;KareemS@tangent.com&gt; &middot; 9 Jun 2026</div>
+      <div class="summary">Hammondcare is expected to place an order soon. Kareem is asking whether someone from Karta can arrange pickup or return of the demo carts.</div>
+      <div class="draft-response">
+        <div class="draft-label">Draft Response</div>
+        <div class="draft-text">Hi Kareem,
+
+Thanks for the heads-up on Hammondcare. I will follow up internally regarding the demo cart pickup and get back to you this week.
+
+Regards,
 Reece</div>
       </div>
     </div>
@@ -440,30 +482,23 @@ Reece</div>
 
     <div class="email-card">
       <span class="inbox-badge primary">reece@</span>
-      <div class="subject">Re: New Brunswick Container Price</div>
-      <div class="from">From: Bryce Mourino &lt;bdmourino@btxglobal.com&gt; &amp; Kevin Nelson &lt;Kevin.Nelson@snb.ca&gt;</div>
-      <div class="summary">The New Brunswick container shipment was delivered on 17 Jun and Kevin Nelson (SNB) confirmed receipt. This long-running delivery thread is now resolved &mdash; no further action required.</div>
+      <div class="subject">Re: Karta Serial Number Label</div>
+      <div class="from">From: Martin Wang &lt;maw@bymjolner.com&gt; &middot; 18 Jun 2026</div>
+      <div class="summary">Martin acknowledged receipt of the serial number label information. No action required.</div>
     </div>
 
     <div class="email-card">
       <span class="inbox-badge primary">reece@</span>
       <div class="subject">Folding seat</div>
-      <div class="from">From: Leo Zhang &lt;lez@bymjolner.com&gt; &middot; 17 Jun, 2:47 PM AEST</div>
-      <div class="summary">Leo (Mjolner R&amp;D) attached the folding seat requirements document and reference pictures for review. These are intended for discussion at an upcoming meeting.</div>
+      <div class="from">From: Leo Zhang &lt;lez@bymjolner.com&gt; &middot; 17 Jun 2026</div>
+      <div class="summary">Leo shared requirements and reference images for the folding seat design. Noted as a topic for future discussion &mdash; no immediate response needed.</div>
     </div>
 
     <div class="email-card">
       <span class="inbox-badge primary">reece@</span>
-      <div class="subject">RE: [AU] Debetrek / Follow-Up from Computex Taipei</div>
-      <div class="from">From: Hans Ling &lt;hans.ling@mactrongroup.com&gt; &middot; 17 Jun, 5:53 PM AEST</div>
-      <div class="summary">Mactron Group responded positively to your Computex follow-up. They are open to partnership collaboration (MTG brand, OEM/ODM with Debetrek, or solution planning) and shared a successful European medical market case study for reference.</div>
-    </div>
-
-    <div class="email-card">
-      <span class="inbox-badge primary">reece@</span>
-      <div class="subject">RE: Following Computex 2026</div>
-      <div class="from">From: Robert Hung &lt;roberthung@formosan.com&gt; &middot; 17 Jun, 6:41 PM AEST</div>
-      <div class="summary">Formosan United Corporation (Battery Division) is following up post-Computex, awaiting battery pack requirements from the Debetrek team. Addressed primarily to Murray with Reece CC'd.</div>
+      <div class="subject">Matt's Role</div>
+      <div class="from">From: Matt Cramsie &lt;matt@kartahealthcare.com&gt; &middot; 19 Apr 2026</div>
+      <div class="summary">Matt sent a follow-up ahead of the board meeting proposing to bring the design function in-house, following discussions with Murray. Internal org structure proposal for review.</div>
     </div>
   </div>
 
@@ -476,9 +511,16 @@ Reece</div>
 
     <div class="email-card">
       <span class="inbox-badge primary">reece@</span>
-      <div class="subject">SEO Strategy &ndash; Kartahealthcare.com (via PandaDoc)</div>
-      <div class="from">From: Jeffrey Jacobs via PandaDoc &lt;docs@email.pandadoc.net&gt; &middot; 18 Jun, 6:44 AM AEST</div>
-      <div class="summary">Jeffrey Jacobs sent a customised SEO strategy proposal for kartahealthcare.com via PandaDoc, focused on generating more qualified leads through search engine optimisation.</div>
+      <div class="subject">Re: HIMSS Return + NY Sample Carts</div>
+      <div class="from">From: A. Kelley &lt;akelley@SWE.com&gt; &middot; 1 Apr 2026</div>
+      <div class="summary">SWE is asking technical questions about URB003S-Kit placement in the UCA-X5-3USBC and SOCI bracket installation. Awaiting clarification before providing pricing.</div>
+    </div>
+
+    <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
+      <div class="subject">New Customer Setup with Credit Terms</div>
+      <div class="from">From: Janelle H. &lt;JanelleH@tangent.com&gt; &middot; 6 Feb 2026</div>
+      <div class="summary">Tangent is requesting credit terms setup and a credit application form for their account with Karta Healthcare. Referred by Kareem.</div>
     </div>
   </div>
 
