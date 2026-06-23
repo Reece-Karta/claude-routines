@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meeting Notes — 23 Jun 2026</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f6fa;
+      color: #2d3436;
+      padding: 24px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #dfe6e9;
+    }
+
+    header h1 { font-size: 1.5rem; font-weight: 600; }
+
+    header .meta {
+      font-size: 0.85rem;
+      color: #636e72;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .stat-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+
+    .stat-card .count {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-card .label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-top: 6px;
+      color: #636e72;
+    }
+
+    .stat-card.meetings .count { color: #6c5ce7; }
+    .stat-card.actions .count  { color: #e17055; }
+    .stat-card.decisions .count { color: #00b894; }
+
+    .meeting-section {
+      margin-bottom: 32px;
+    }
+
+    .meeting-section-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .meeting-section-header .time-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: #fff;
+      background: #6c5ce7;
+    }
+
+    .meeting-section-header h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .meeting-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      border-left: 4px solid #6c5ce7;
+    }
+
+    .meeting-card .attendees {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .attendee-chip {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      background: #dfe6e9;
+      color: #2d3436;
+    }
+
+    .subsection {
+      margin-top: 16px;
+    }
+
+    .subsection-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #636e72;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .summary-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .summary-list li {
+      font-size: 0.9rem;
+      line-height: 1.55;
+      padding: 4px 0 4px 16px;
+      position: relative;
+    }
+
+    .summary-list li::before {
+      content: "\2022";
+      position: absolute;
+      left: 0;
+      color: #636e72;
+    }
+
+    .action-items {
+      list-style: none;
+      padding: 0;
+    }
+
+    .action-items li {
+      font-size: 0.9rem;
+      line-height: 1.55;
+      padding: 5px 0 5px 24px;
+      position: relative;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .action-items li:last-child {
+      border-bottom: none;
+    }
+
+    .action-items li::before {
+      content: "\2610";
+      position: absolute;
+      left: 0;
+      font-size: 1rem;
+      color: #e17055;
+    }
+
+    .action-owner {
+      font-weight: 600;
+      color: #6c5ce7;
+    }
+
+    .decision-items {
+      list-style: none;
+      padding: 0;
+    }
+
+    .decision-items li {
+      font-size: 0.9rem;
+      line-height: 1.55;
+      padding: 5px 0 5px 24px;
+      position: relative;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .decision-items li:last-child {
+      border-bottom: none;
+    }
+
+    .decision-items li::before {
+      content: "\2714";
+      position: absolute;
+      left: 0;
+      font-size: 0.85rem;
+      color: #00b894;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 48px 24px;
+      color: #636e72;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 16px; }
+      .stats { grid-template-columns: 1fr; }
+      .meeting-card { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Meeting Notes</h1>
+    <div class="meta">Exported 23 Jun 2026 &middot; Granola</div>
+  </header>
+
+  <div class="stats">
+    <div class="stat-card meetings">
+      <div class="count">2</div>
+      <div class="label">Meetings</div>
+    </div>
+    <div class="stat-card actions">
+      <div class="count">10</div>
+      <div class="label">Action Items</div>
+    </div>
+    <div class="stat-card decisions">
+      <div class="count">9</div>
+      <div class="label">Decisions</div>
+    </div>
+  </div>
+
+  <!-- Meeting 1 -->
+  <div class="meeting-section">
+    <div class="meeting-section-header">
+      <span class="time-badge">9:03 AM AEST</span>
+      <h2>Drawer system strategy &mdash; six and nine inch options for Karta and competitors</h2>
+    </div>
+
+    <div class="meeting-card">
+      <div class="attendees">
+        <span class="attendee-chip">Reece Munro</span>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-label">Summary</div>
+        <ul class="summary-list">
+          <li>Monash debrief session planned for 30 Jun; MD wants a collective review to extract all learnings from the bid</li>
+          <li>ACT ergotronic work generating only 5&ndash;8% margin; decision to set a 15% floor (20% without approval) and redirect focus to higher-margin NSW business</li>
+          <li>ACT reframe opportunity: 335 Herman Miller/Abalo medical carts up for replacement &mdash; potential X5 DC foot-in-the-door</li>
+          <li>Six and nine inch drawers remain essential for large bundle deals; Northern Health (~350&ndash;400 carts in ~18 months) and Alfred (~500 carts over 2&ndash;3 years) both require drawer configs</li>
+          <li>Nine inch drawer is the critical gap; six inch already covered via Ergotron and Capsa</li>
+          <li>Preferred drawer direction: SV41-style add-on controller mounted to work surface, avoiding tooling cost and infection control concerns of embedded install</li>
+          <li>Dream spec includes single tap-on/tap-off RFID unlock, 3/6/9 inch options, better internal dividers, and potential USB-C software unlock</li>
+          <li>Target drawer pricing: land under $500 AUD, sell at ~$900&ndash;$1,000 AUD</li>
+          <li>ICW basket mount query from Bayer Health; Humanscale carts being decommissioned at Melbourne Health to be saved for reference</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-label">Action Items</div>
+        <ul class="action-items">
+          <li><span class="action-owner">Murray:</span> Send calendar invite for Monash debrief session &mdash; Tue 30 Jun, 3:30&ndash;5:00 PM</li>
+          <li><span class="action-owner">Reece:</span> Set Ben&rsquo;s margin floor for ACT work &mdash; nothing under 20% without approval; raise in tomorrow&rsquo;s meeting</li>
+          <li>Build a comparison table for Monash debrief &mdash; products pitched, buy price, sell price, estimated competitor pricing</li>
+          <li><span class="action-owner">Reece:</span> Assess drawer system feasibility and options within 1&ndash;2 weeks; present shortlist if full spec not achievable</li>
+          <li>Research ICW arm basket mount options and share references with Bayer Health contact</li>
+          <li><span class="action-owner">Murray:</span> Save Humanscale carts from Melbourne Health decommission and send up for reference</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-label">Key Decisions</div>
+        <ul class="decision-items">
+          <li>No more ACT business at 5&ndash;8% margin; floor set at 15%, nothing under 20% without approval</li>
+          <li>Preferred drawer design: SV41-style add-on controller mounted to work surface (not embedded/flush)</li>
+          <li>Nine inch drawer is the critical gap to address; six inch already covered</li>
+          <li>All-metal construction preferred over plastic to avoid ~$100K tooling cost for plastic moulds</li>
+          <li>Target landed cost for drawer set: under $500 AUD, sell at ~$900&ndash;$1,000 AUD</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Meeting 2 -->
+  <div class="meeting-section">
+    <div class="meeting-section-header">
+      <span class="time-badge">10:02 AM AEST</span>
+      <h2>Gold Coast Hospital &mdash; clinical workflow and cart strategy with Mitch</h2>
+    </div>
+
+    <div class="meeting-card">
+      <div class="attendees">
+        <span class="attendee-chip">Reece Munro</span>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-label">Summary</div>
+        <ul class="summary-list">
+          <li>Coaching Mitch on approaching the AD conversation: frame issues from the client&rsquo;s perspective, go in from a position of strength, no apologies or beseeching</li>
+          <li>Frontline buyers (Candy and HBA) have effectively dropped Karta; they now supply all day-to-day volume at Gold Coast</li>
+          <li>No compelling cost-saving pitch exists against Gold Coast&rsquo;s current setup &mdash; their LiFePO4 swappable system is cost-effective for what they get</li>
+          <li>Advantech option worth exploring: 210Wh hot-swap battery (upgradeable to 420Wh), 5-year warranty, chargers bundled, Monash pricing came in lower than current comparison</li>
+          <li>Strategic reframe: position Karta as a clinical advisor, not a tender responder &mdash; lead with &ldquo;tell us your story&rdquo; rather than a solution</li>
+          <li>Nurses are the most important user group; nursing administration is the most powerful clinical voice</li>
+          <li>Longer-range play around clinical workflow evolution: EMR maturity will shift digital workflows in years 5&ndash;8, handhelds, reduced walking distance, AI-assisted workflows</li>
+          <li>Cart preference on the floor: Urbatron carts are well-liked; GCX foot mechanism is divisive</li>
+          <li>Scale of opportunity: ~400 carts FY27, ~400&ndash;450 FY28 across Gold Coast University Hospital and Robina</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-label">Action Items</div>
+        <ul class="action-items">
+          <li><span class="action-owner">Mitch:</span> Schedule meeting with Matthew Lun in the new financial year (starts in 7 days)</li>
+          <li><span class="action-owner">Reece/Mitch:</span> Set up joint visit with Daniel Clem (ICT procurement manager) next week</li>
+          <li><span class="action-owner">Reece/Mitch:</span> Arrange meeting with Kirsten (head of digital health) alongside the Clem visit</li>
+          <li><span class="action-owner">Courtney:</span> Retrieve council serial numbers for the 19th June items</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-label">Key Decisions</div>
+        <ul class="decision-items">
+          <li>No compelling cost-saving pitch available against Gold Coast&rsquo;s current setup; pivot away from price-led approach</li>
+          <li>Strategic approach: position as clinical advisor, not tender responder &mdash; lead with discovery</li>
+          <li>Explore Advantech as a cost-competitive alternative to current comparison model</li>
+          <li>Must submit a response to prevent Candy from getting a free run with the SV41; offer a one-stop shop vs. two-supplier model</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
