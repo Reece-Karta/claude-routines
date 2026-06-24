@@ -32,16 +32,6 @@
       color: #636e72;
     }
 
-    .notice {
-      background: #ffeaa7;
-      border-radius: 8px;
-      padding: 12px 16px;
-      margin-bottom: 20px;
-      font-size: 0.85rem;
-      color: #6c5600;
-      border: 1px solid #f0d060;
-    }
-
     .stats {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -274,6 +264,16 @@
       font-size: 1.1rem;
     }
 
+    .access-note {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-size: 0.82rem;
+      color: #856404;
+      margin-bottom: 20px;
+    }
+
     @media (max-width: 600px) {
       body { padding: 16px; }
       .stats { grid-template-columns: repeat(2, 1fr); }
@@ -287,29 +287,29 @@
   <header>
     <h1>Email Triage</h1>
     <div class="meta">
-      reece@ &amp; sales@kartahealthcare.com &middot; <span id="triage-date">23 Jun 2026, 7:00 AM AEST</span>
+      reece@ &amp; sales@kartahealthcare.com &middot; <span id="triage-date">25 Jun 2026, 7:05 AM AEST</span>
     </div>
   </header>
 
-  <div class="notice">
-    &#9888; Unable to access sales@kartahealthcare.com inbox (delegate access denied). Only reece@kartahealthcare.com emails are shown below.
+  <div class="access-note">
+    Note: The sales@kartahealthcare.com inbox could not be accessed (permission denied). All emails below are from the reece@kartahealthcare.com inbox only.
   </div>
 
   <div class="stats">
     <div class="stat-card urgent">
-      <div class="count" id="count-urgent">1</div>
+      <div class="count" id="count-urgent">2</div>
       <div class="label">Urgent</div>
     </div>
     <div class="stat-card action">
-      <div class="count" id="count-action">3</div>
+      <div class="count" id="count-action">8</div>
       <div class="label">Action Needed</div>
     </div>
     <div class="stat-card fyi">
-      <div class="count" id="count-fyi">2</div>
+      <div class="count" id="count-fyi">4</div>
       <div class="label">FYI</div>
     </div>
     <div class="stat-card low">
-      <div class="count" id="count-low">2</div>
+      <div class="count" id="count-low">1</div>
       <div class="label">Low Priority</div>
     </div>
   </div>
@@ -318,14 +318,22 @@
   <div class="calendar">
     <div class="calendar-header">
       <span class="badge">Today's Schedule</span>
-      <h2>1 meeting</h2>
+      <h2>2 meetings &mdash; 24 Jun 2026</h2>
     </div>
 
     <div class="meeting-card">
-      <div class="meeting-time">11:00 &ndash; 11:30</div>
+      <div class="meeting-time">2:30 &ndash; 3:00 PM</div>
       <div class="meeting-details">
-        <div class="meeting-title">Foot stance/castors discussion</div>
-        <div class="meeting-meta">Microsoft Teams &middot; Matt Cramsie (matt@kartahealthcare.com)</div>
+        <div class="meeting-title">Outerspace x Karta Healthcare: Follow up</div>
+        <div class="meeting-meta">Duke St-02 (small, near front entry) &middot; Rish Sahi, C. Tucker (Outerspace)</div>
+      </div>
+    </div>
+
+    <div class="meeting-card">
+      <div class="meeting-time">3:00 &ndash; 3:45 PM</div>
+      <div class="meeting-details">
+        <div class="meeting-title">Karta + Mjolner Fortnightly Update</div>
+        <div class="meeting-meta">Microsoft Teams &middot; Matt C., Martin Wang (Mjolner)</div>
       </div>
     </div>
   </div>
@@ -339,19 +347,31 @@
 
     <div class="email-card">
       <span class="inbox-badge primary">reece@</span>
-      <div class="subject">Re: FHP PO 2960576</div>
-      <div class="from">From: Katlynn Lewis, Buyer/Planner, FIRST Products &lt;klewis@firstproducts.com&gt; &middot; 23 Jun, 11:15 PM AEST</div>
-      <div class="summary">Customer is chasing delivery status on their purchase order. You confirmed approximately one week lead time on 17 Jun &mdash; it has now been 6 days with no tracking sent.</div>
-      <span class="deadline">&#9200; Delivery promised: this week (~24 Jun)</span>
+      <div class="subject">Reminder: Karta Healthcare Pty Ltd &ndash; RADBE Consulting &ndash; Letter of Engagement</div>
+      <div class="from">From: RADBE Consulting via DocuSign &lt;dse@aumail.docusign.net&gt; &middot; 25 Jun, 12:01 AM AEST</div>
+      <div class="summary">RADBE Consulting has sent their Letter of Engagement for financial advisory and consulting services and is awaiting your review and signature via DocuSign. This is a reminder &mdash; the document has been pending.</div>
+      <div class="deadline">&#9200; Overdue &mdash; reminder sent, original signing request still pending</div>
+      <div class="draft-response">
+        <div class="draft-label">Suggested Action</div>
+        <div class="draft-text">Review and sign the Letter of Engagement directly via the DocuSign link in the email. If you have questions about the terms, contact RADBE at info@radbe.com.au or 07 3216 6242 before signing.</div>
+      </div>
+    </div>
+
+    <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
+      <div class="subject">FW: Tangent Medical Carts &ndash; Hammondcare demo cart pickup</div>
+      <div class="from">From: Kareem Sherif &lt;KareemS@tangent.com&gt; &middot; 10 Jun, 12:18 AM AEST</div>
+      <div class="summary">Hammondcare appears ready to place an order. Kareem is asking for help arranging the pickup or return of the demo carts, following up on Matt's questions.</div>
+      <div class="deadline">&#9200; Customer ready to order &mdash; demo cart logistics need resolving ASAP</div>
       <div class="draft-response">
         <div class="draft-label">Draft Response</div>
-        <div class="draft-text">Hi Katlynn,
+        <div class="draft-text">Hi Kareem,
 
-Thanks for following up. Yes, we are still on track for delivery this week. I'll send through tracking details as soon as the shipment is dispatched.
+Apologies for the delayed response. Great to hear Hammondcare is moving forward.
 
-Apologies for the slight delay in confirming &mdash; I'll ensure this is prioritised today.
+I'll coordinate with Eamonn on the demo cart pickup and come back to you with a plan by end of week. Can you confirm the current location of the units?
 
-Kind regards,
+Regards,
 Reece</div>
       </div>
     </div>
@@ -366,20 +386,18 @@ Reece</div>
 
     <div class="email-card">
       <span class="inbox-badge primary">reece@</span>
-      <div class="subject">RE: X5 Questions &mdash; Answers (update)</div>
-      <div class="from">From: Leon Adams, VP Sales, Ultralife/SWE &lt;ladams@SWE.com&gt; &middot; 24 Jun, 5:50 AM AEST</div>
-      <div class="summary">Leon has no record of which power cords shipped with the original X5 loaner to First Products. He provided photos of available US cords (straight, black &mdash; not coiled) and agrees Karta should place the PO directly with Ultralife. Needs a decision on ordering approach and a quote request.</div>
+      <div class="subject">RE: Karta Chair Accessory Concept &ndash; target cost and mechanism details needed</div>
+      <div class="from">From: Leo Zhang &lt;lez@bymjolner.com&gt; (Mjolner R&amp;D) &middot; 24 Jun, 1:00 PM AEST</div>
+      <div class="summary">Leo is asking for a target cost for the folding seat, how many steps to open/fold the product, and notes that tooling will be needed for aesthetics &mdash; all of which significantly impact pricing.</div>
       <div class="draft-response">
         <div class="draft-label">Draft Response</div>
-        <div class="draft-text">Hi Leon,
+        <div class="draft-text">Hi Leo,
 
-Thanks for the detailed update and photos.
+Thanks for the update. Good questions.
 
-Understood on the power cord records &mdash; I'll check with Kim at First Products to confirm what was originally received.
+We're targeting a cost of around [USD XX] per unit at volume. Ideally the open/fold mechanism should be no more than 2-3 steps for ease of use.
 
-Regarding the PO process, I agree &mdash; let's proceed with Karta placing the order directly with Ultralife. Could you please send through a quote for the single system so I can raise the Karta PO?
-
-I'll follow up separately on the broader Karta quote for all US-market X5 components.
+I'd suggest we discuss this in more detail on our next fortnightly call. In the meantime, feel free to proceed with the tooling assessment based on the concept as-is so we can understand the cost envelope.
 
 Kind regards,
 Reece</div>
@@ -388,15 +406,90 @@ Reece</div>
 
     <div class="email-card">
       <span class="inbox-badge primary">reece@</span>
-      <div class="subject">Karta Healthcare &mdash; Invoice #r-18313 &mdash; Overdue</div>
-      <div class="from">From: Marketing Success, Inc &lt;no-reply@recur360.com&gt; &middot; 23 Jun, 8:13 PM AEST</div>
-      <div class="summary">SEO Strategy invoice for $3,495.00 (from Marketing Success / Jeff Jacobs) is now 1 day overdue. Due date was 22 Jun 2026. Payment required.</div>
-      <span class="deadline">&#9200; Overdue since 22 Jun 2026 &mdash; $3,495.00</span>
+      <div class="subject">RE: [AU] Debetrek / Follow-Up from Computex Taipei &ndash; 27&quot; AIO use case query</div>
+      <div class="from">From: Hans Ling &lt;hans.ling@mactrongroup.com&gt; (Mactron Group) &middot; 24 Jun, 7:49 PM AEST</div>
+      <div class="summary">Hans is asking whether the additional 27&quot; AIO demand is for medical healthcare, what the use scenario is, and whether the 27&quot; screen size is mandatory. Awaiting your feedback on the earlier quote as well.</div>
       <div class="draft-response">
         <div class="draft-label">Draft Response</div>
-        <div class="draft-text">Hi Jeff,
+        <div class="draft-text">Hi Hans,
 
-Noted &mdash; I'll arrange payment for invoice r-18313 today.
+Thanks for following up.
+
+Yes, the 27" AIO demand is for the medical healthcare sector. The primary use case is bedside patient entertainment and clinical information display in hospital ward environments.
+
+The 27" size is preferred but not strictly mandatory &mdash; we would consider 24" if the price point is significantly more competitive. We're currently reviewing your earlier quote and will revert with detailed feedback shortly.
+
+Kind regards,
+Reece</div>
+      </div>
+    </div>
+
+    <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
+      <div class="subject">RE: [AU] Debetrek / Computex Taipei &ndash; Mactron pricing quote received</div>
+      <div class="from">From: Hans Ling &lt;hans.ling@mactrongroup.com&gt; (Mactron Group) &middot; 18 Jun, 5:48 PM AEST</div>
+      <div class="summary">Mactron has provided detailed pricing for all four requested products: WMR2387 (US$2,245&ndash;2,395), WMP1567 (US$1,945&ndash;2,095), TMS2380 (US$995&ndash;1,095), and TMS2700 (US$995&ndash;1,095) with MOQ tiers at 100 and 300 units. PDF pricing attachments included.</div>
+      <div class="draft-response">
+        <div class="draft-label">Draft Response</div>
+        <div class="draft-text">Hi Hans,
+
+Thank you for the detailed pricing. We've received the quotes and PDF attachments for all four products.
+
+We're currently reviewing internally and will come back to you with feedback and next steps, including sample arrangements, within the next week.
+
+Kind regards,
+Reece</div>
+      </div>
+    </div>
+
+    <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
+      <div class="subject">Re: Accessory Rail Finalization &ndash; pricing and MOQ spreadsheet</div>
+      <div class="from">From: Martin Wang &lt;maw@bymjolner.com&gt; (Mjolner Operations) &middot; 18 Jun, 4:50 PM AEST</div>
+      <div class="summary">Martin has sent the finalised pricing and MOQ spreadsheet for the Karta Accessory Rail System, along with a shipping address for the replacement cable cover sample. Tooling modifications quoted at USD 310 (end cap) and USD 280 (scanner bracket).</div>
+      <div class="draft-response">
+        <div class="draft-label">Draft Response</div>
+        <div class="draft-text">Hi Martin,
+
+Thanks for sending through the pricing and MOQ spreadsheet. I'll review the details and confirm we're good to proceed.
+
+I've noted the shipping address. We'll get the replacement cable cover sent out to you this week.
+
+Kind regards,
+Reece</div>
+      </div>
+    </div>
+
+    <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
+      <div class="subject">Re: Karta.NX Items for quoting &ndash; preliminary pricing from Sigma-Care</div>
+      <div class="from">From: Sigma-Care / David Hsieh &lt;export@sigmabed.com&gt; &middot; 15 Jun, 1:18 PM AEST</div>
+      <div class="summary">Sigma-Care has provided a preliminary estimate of USD 400&ndash;420 per cart for the Karta.NX OEM project. This is a rough figure based on physical samples only &mdash; they need the tooling drawings to provide a final quote. Plastic component pricing included; aluminium parts still being evaluated.</div>
+      <div class="draft-response">
+        <div class="draft-label">Draft Response</div>
+        <div class="draft-text">Hi David,
+
+Thank you for the preliminary pricing. The USD 400-420 range is a useful starting point for our planning.
+
+We understand the final quote is pending the tooling drawings. We'll coordinate with our design team to get those across to you as soon as possible. Please do send through the aluminium parts pricing when ready.
+
+Kind regards,
+Reece</div>
+      </div>
+    </div>
+
+    <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
+      <div class="subject">Matt's Role &ndash; expanded full-time proposal at $16K/month</div>
+      <div class="from">From: Matt Cramsie &lt;matt@kartahealthcare.com&gt; &middot; 19 Apr, 10:58 PM AEST</div>
+      <div class="summary">Matt has proposed expanding his role from part-time design to full-time design + marketing at $16,000/month on a 12-month term. Includes detailed deliverable roadmap (Q2 2026 through Q1 2027), Karta.NX supplier transition oversight, and AI marketing tools exploration. Sent ahead of a board meeting.</div>
+      <div class="draft-response">
+        <div class="draft-label">Draft Response</div>
+        <div class="draft-text">Hi Matt,
+
+Thanks for putting this together. Apologies for the delay in getting back to you on this.
+
+I've reviewed the proposal and the deliverable roadmap. I'd like to schedule a call to discuss the scope and phasing in more detail before we take it to the board. Are you available later this week?
 
 Regards,
 Reece</div>
@@ -405,20 +498,45 @@ Reece</div>
 
     <div class="email-card">
       <span class="inbox-badge primary">reece@</span>
-      <div class="subject">Enquiry for L Visa | Reece Munro</div>
-      <div class="from">From: Sukanya Raman, Attorney, Davies &amp; Associates &lt;sraman@usimmigrationadvisor.com&gt; &middot; 23 Jun, 9:49 PM AEST</div>
-      <div class="summary">Immigration attorney has responded to your L-1 visa inquiry and is requesting detailed business information (nature of business, ownership structure, employees, revenue, US capital investment, org chart, etc.) before scheduling an introductory call.</div>
+      <div class="subject">Re: HIMSS Return + NY Sample Carts &ndash; assembly questions from SWE</div>
+      <div class="from">From: Ann Kelley &lt;akelley@SWE.com&gt; (Southwest Electronic Energy) &middot; 2 Apr, 7:32 AM AEST</div>
+      <div class="summary">Ann is asking whether the URB003S-Kit goes in the UCA-X5-3USBC, what about a URB-X5, where to install the SOCI bracket, and whether the SOCI connects via USB-B mini or USB-C. She has photos of cable harnesses and identified a potentially damaged USB-C connector.</div>
       <div class="draft-response">
         <div class="draft-label">Draft Response</div>
-        <div class="draft-text">Dear Sukanya,
+        <div class="draft-text">Hi Ann,
 
-Thank you for your prompt response and the detailed list of questions.
+Apologies for the very delayed response on this.
 
-I'll compile the requested information and send it through within the next couple of days. In the meantime, could we schedule an introductory call at your convenience?
+To answer your questions:
+- Yes, the URB003S-Kit goes in the UCA-X5-3USBC
+- We won't need the URB-X5 for these sample units
+- The SOCI bracket mounts to [confirm location]
+- The SOCI connects via the USB-B mini port
 
-Kind regards,
-Reece Munro
-COO, Karta Healthcare</div>
+Regarding the damaged USB-C connector &mdash; can you send a photo so I can assess whether it needs replacing?
+
+Happy to jump on a call if easier to walk through the remaining steps.
+
+Thanks,
+Reece</div>
+      </div>
+    </div>
+
+    <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
+      <div class="subject">New Customer Setup with Credit Terms &ndash; Tangent</div>
+      <div class="from">From: Janelle Ho &lt;JanelleH@tangent.com&gt; (Tangent Accounting) &middot; 7 Feb, 3:31 AM AEST</div>
+      <div class="summary">Tangent (referred by Kareem Sherif) is requesting credit terms and a credit application to complete their account setup with Karta Healthcare.</div>
+      <div class="draft-response">
+        <div class="draft-label">Draft Response</div>
+        <div class="draft-text">Hi Janelle,
+
+Apologies for the delayed response. I'll have our finance team send through the credit application and supporting documentation this week.
+
+If there's any additional information you need in the meantime, please don't hesitate to reach out.
+
+Regards,
+Reece</div>
       </div>
     </div>
   </div>
@@ -432,16 +550,30 @@ COO, Karta Healthcare</div>
 
     <div class="email-card">
       <span class="inbox-badge primary">reece@</span>
-      <div class="subject">Re: Castor samples (correction)</div>
-      <div class="from">From: Matt Cramsie &lt;matt@kartahealthcare.com&gt; &middot; 23 Jun, 4:45 PM AEST</div>
-      <div class="summary">Matt sent a correction to Damien at Tente (CC: Reece) &mdash; he meant the locking castors with red pedals, not the non-locking ones. Original request was for Levina 100mm and Linea 125mm samples for the Karta.JR carts.</div>
+      <div class="subject">RE: X5 Questions &ndash; Answers update</div>
+      <div class="from">From: Leon Adams &lt;ladams@SWE.com&gt; (Ultralife / SWE, VP Sales) &middot; 25 Jun, 2:20 AM AEST</div>
+      <div class="summary">Leon acknowledged your previous update with &ldquo;Sounds good.&rdquo; No further action required.</div>
     </div>
 
     <div class="email-card">
       <span class="inbox-badge primary">reece@</span>
-      <div class="subject">RE: Following Computex 2026</div>
-      <div class="from">From: Robert Hung, Formosan United Corp &lt;roberthung@formosan.com&gt; &middot; 22 Jun, 4:48 PM AEST</div>
-      <div class="summary">Formosan (battery pack manufacturer from Computex) following up with Murray (CC: Reece), offering to connect with BriteMed directly for EMS/Telemedicine cart manufacturing.</div>
+      <div class="subject">RE: FHP PO 2960576</div>
+      <div class="from">From: Kim Marone &lt;kmarone@firstproducts.com&gt; (First Healthcare Products) &middot; 24 Jun, 9:33 PM AEST</div>
+      <div class="summary">Kim thanked you for the update on the FHP purchase order. No further action required.</div>
+    </div>
+
+    <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
+      <div class="subject">RE: Following Computex 2026 &ndash; BriteMed EMS/Telemedicine carts</div>
+      <div class="from">From: Robert Hung &lt;roberthung@formosan.com&gt; (Formosan) &middot; 22 Jun, 4:48 PM AEST</div>
+      <div class="summary">Formosan noticed you were looking at EMS/Telemedicine cart manufacturers at Computex and is offering to connect you directly with BriteMed's sales team if interested.</div>
+    </div>
+
+    <div class="email-card">
+      <span class="inbox-badge primary">reece@</span>
+      <div class="subject">Re: Website updates &ndash; staging links for product pages</div>
+      <div class="from">From: Matt Cramsie &lt;matt@kartahealthcare.com&gt; &middot; 22 Jun, 10:26 AM AEST</div>
+      <div class="summary">Matt has moved the X5 AC Hot Swap Power System and related product pages to permanent staging URLs on staging2.kartahealthcare.com for review.</div>
     </div>
   </div>
 
@@ -454,16 +586,9 @@ COO, Karta Healthcare</div>
 
     <div class="email-card">
       <span class="inbox-badge primary">reece@</span>
-      <div class="subject">Fragomen Website Inquiry: Reece Munro</div>
-      <div class="from">From: Kyndall Hodgson, Fragomen &lt;khodgson@fragomen.com&gt; &middot; 24 Jun, 2:10 AM AEST</div>
-      <div class="summary">Fragomen acknowledges receipt of your L-1A visa inquiry (AU &rarr; US/Texas) and confirms a team member will follow up shortly. No action required yet.</div>
-    </div>
-
-    <div class="email-card">
-      <span class="inbox-badge primary">reece@</span>
-      <div class="subject">U.S. Immigration Inquiry &mdash; David Immigration Law</div>
-      <div class="from">From: Betsy Lindow, David Immigration Law &lt;betsy@usaimmigration.law&gt; &middot; 24 Jun, 1:00 AM AEST</div>
-      <div class="summary">Paralegal offering a 30-minute consultation ($220, credited toward future legal services) with Attorney Andrew David to review your immigration situation.</div>
+      <div class="subject">Folding seat &ndash; requirements and reference pictures</div>
+      <div class="from">From: Leo Zhang &lt;lez@bymjolner.com&gt; (Mjolner R&amp;D) &middot; 17 Jun, 2:47 PM AEST</div>
+      <div class="summary">Leo has shared the initial requirements document and reference pictures for the folding seat concept. For review ahead of the next discussion with Mjolner.</div>
     </div>
   </div>
 
