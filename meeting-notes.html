@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meeting Notes Dashboard</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f6fa;
+      color: #2d3436;
+      padding: 24px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #dfe6e9;
+    }
+
+    header h1 { font-size: 1.5rem; font-weight: 600; }
+
+    header .meta {
+      font-size: 0.85rem;
+      color: #636e72;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .stat-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+
+    .stat-card .count {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-card .label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-top: 6px;
+      color: #636e72;
+    }
+
+    .stat-card.meetings .count { color: #6c5ce7; }
+    .stat-card.actions .count { color: #e17055; }
+    .stat-card.decisions .count { color: #00b894; }
+
+    .meeting-section {
+      margin-bottom: 28px;
+    }
+
+    .meeting-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      border-left: 4px solid #6c5ce7;
+    }
+
+    .meeting-card .meeting-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+
+    .meeting-card .meeting-time {
+      font-size: 0.85rem;
+      color: #6c5ce7;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .attendees {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .attendee-chip {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      background: #dfe6e9;
+      color: #2d3436;
+    }
+
+    .section-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #636e72;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .summary {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #2d3436;
+      margin-bottom: 16px;
+    }
+
+    .summary ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .summary li {
+      margin-bottom: 4px;
+    }
+
+    .action-items, .decision-items {
+      margin-bottom: 16px;
+    }
+
+    .action-item, .decision-item {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 6px;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      border: 1px solid #dfe6e9;
+    }
+
+    .action-item .owner {
+      font-size: 0.75rem;
+      color: #e17055;
+      font-weight: 600;
+    }
+
+    .decision-item {
+      border-left: 3px solid #00b894;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 48px 24px;
+      color: #636e72;
+      font-size: 1.1rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 16px; }
+      .stats { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Meeting Notes</h1>
+    <div class="meta">
+      Exported 28 Jun 2026
+    </div>
+  </header>
+
+  <div class="stats">
+    <div class="stat-card meetings">
+      <div class="count">0</div>
+      <div class="label">Meetings</div>
+    </div>
+    <div class="stat-card actions">
+      <div class="count">0</div>
+      <div class="label">Action Items</div>
+    </div>
+    <div class="stat-card decisions">
+      <div class="count">0</div>
+      <div class="label">Decisions</div>
+    </div>
+  </div>
+
+  <div class="empty-state">No meetings recorded today</div>
+
+</body>
+</html>
