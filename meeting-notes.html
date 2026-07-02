@@ -198,27 +198,114 @@
   <header>
     <h1>Meeting Notes</h1>
     <div class="meta">
-      Karta Healthcare &middot; <span id="export-date">1 Jul 2026</span>
+      Karta Healthcare &middot; <span id="export-date">2 Jul 2026</span>
     </div>
   </header>
 
   <div class="stats">
     <div class="stat-card meetings">
-      <div class="count" id="count-meetings">0</div>
+      <div class="count" id="count-meetings">2</div>
       <div class="label">Meetings</div>
     </div>
     <div class="stat-card actions">
-      <div class="count" id="count-actions">0</div>
+      <div class="count" id="count-actions">9</div>
       <div class="label">Action Items</div>
     </div>
     <div class="stat-card decisions">
-      <div class="count" id="count-decisions">0</div>
+      <div class="count" id="count-decisions">7</div>
       <div class="label">Decisions</div>
     </div>
   </div>
 
   <div class="meeting-section">
-    <div class="empty-state">No meetings recorded today</div>
+
+    <div class="meeting-card">
+      <div class="meeting-title">US visa strategy for Karta — E3 vs L1A comparison</div>
+      <div class="meeting-time">2 Jul 2026, 6:31 AM AEST</div>
+
+      <div class="attendees">
+        <span class="attendee-chip">Reece Munro</span>
+      </div>
+
+      <div class="subsection summary">
+        <h3>Summary</h3>
+        <ul>
+          <li>Reece has been employed by Debetrek for 18 years; Karta Healthcare is a 2-year-old sister entity with the same directors but different shareholder splits, and remained pre-revenue during startup so Reece's employment stayed under Debetrek</li>
+          <li>Lawyer strongly recommends the E-3 visa over L-1A: no petition required (single Sydney consulate interview), ~6-8 week timeline vs. months, ~$6,500 USD vs. ~$15,000 USD, and a ~498/500 approval rate vs. 60-70% for L-1A</li>
+          <li>Reece qualifies for E-3 via 18 years of experience; a credentials assessment (~$300-400) will formalise this</li>
+          <li>E-3 does not provide a path to permanent residency (unlike L-1A), but this isn't a concern given the 2-year setup horizon</li>
+          <li>Spouse is covered under the E-3S dependent visa (included in the $6,500 flat fee) and retains work rights; government fees are ~$300-400 per person on top</li>
+          <li>Delaware entity registration is in progress with a 2-3 week timeline; ~70% of E-3 prep work (DS-160, offer letter, letter of support, experience evaluation) can start before the entity is finalised</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Action Items</h3>
+        <ul class="action-items">
+          <li><span class="owner">Reece:</span> Review and sign the E-3 engagement proposal once the lawyer sends it through, and confirm the right signatory for the US entity</li>
+          <li><span class="owner">Reece:</span> Begin E-3 prep work (DS-160, offer letter, letter of support, experience evaluation) in parallel with the Delaware entity setup</li>
+          <li><span class="owner">Reece:</span> Hold off on any share transfer until after the visa is approved</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Key Decisions</h3>
+        <ul class="decision-items">
+          <li>Proceeding with the E-3 visa over L-1A based on the lawyer's recommendation — faster, cheaper, and near-certain approval odds</li>
+          <li>Equity/share transfer will be deferred until after the visa is secured, to avoid undermining the employee/employer relationship at interview</li>
+          <li>Signing authority for the US entity's immigration paperwork will be held by someone other than Reece</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="meeting-card">
+      <div class="meeting-title">Prince Charles hospital — life connects failure rate and Metro North upgrade strategy</div>
+      <div class="meeting-time">2 Jul 2026, 8:04 AM AEST</div>
+
+      <div class="attendees">
+        <span class="attendee-chip">Reece Munro</span>
+      </div>
+
+      <div class="subsection summary">
+        <h3>Summary</h3>
+        <ul>
+          <li>US entity setup is ~2 weeks away and the visa ~2 months away; move to the US tentatively penciled in for the first week of October</li>
+          <li>August sales trip with Eamon planned for early August: Texas (Ultralife Houston QBR-style review), New York (Eamon's contacts), and Canada (large opportunity, samples already received)</li>
+          <li>First US X5 shipment was delayed after Leon held demo equipment for a week before passing it to Randy; goods have now been delivered and First Products is targeting delivery to the end customer by end of week</li>
+          <li>Ultralife ran an NBO process on lifting Brett's hub-charging circuit onto the old board for the X5 AC change (min. order value ~$750K for Prince Charles alone); the proposal was not approved due to an 8-week board turnaround plus IEC validation timeline that can't ship before end of 2025</li>
+          <li>New inverter revision is too electrically noisy to pass IEC; another revision is needed, roughly mid-to-end Q1 2027</li>
+          <li>Prince Charles (Metro North) RFQ released Monday specifically requests Life Connects; Ergotron looks unlikely to back Karta/DE as reseller</li>
+          <li>Life Connects field failures at Townsville: 7 of 47 deployed units failed in 4 weeks (14.8%), 6 of which are critical spring-pin failures causing voltage imbalance; Ergotron claims "bad batch" but Karta believes it's a design flaw, and Ergotron can't provide references for other sites</li>
+          <li>Metro North does not yet know about the Townsville failures — Karta is holding this information to counter the Life Connects push</li>
+          <li>Proposed path forward: sell X5 AC in current form to Metro North now, then retrofit the hub-charging circuit boards once IEC-certified (targeting ~February 2027), with Karta covering the ~$15K certification cost</li>
+          <li>Wall charger design progressing toward a box-style all-metal enclosure; revised cost estimate is ~$700 USD (~$1,000 AUD), better than the previous ~$900 USD design</li>
+          <li>Three new website pages (Hot Swap, X5 AC, X5 SuperLite) going live by end of Friday; SEO engagement signed with Marketing Success; email campaign live to 15,000 US/Canada contacts</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Action Items</h3>
+        <ul class="action-items">
+          <li><span class="owner">Jason:</span> Schedule a call with Mike Mana (and possibly Leon/Eamon) for early next week so Reece can present the Life Connects failure data and propose the deliver-now/upgrade-later model — Monday or Tuesday preferred, Wednesday before 5pm AEST at latest</li>
+          <li><span class="owner">Jason:</span> Get a confirmed new inverter timeline from Brett or Leon so Karta can forecast AC unit volumes</li>
+          <li><span class="owner">Jason:</span> Re-engage Jeff on the wall charger design and get the next box-style metal concept to Reece</li>
+          <li><span class="owner">Jason:</span> Follow up with Leon on what caused the week-long hold on the First Products shipment</li>
+          <li><span class="owner">Jason:</span> Send Karta a price book including US-specific accessories (e.g. splitter cable) for the next blanket order</li>
+          <li><span class="owner">Reece:</span> Confirm the Life Connects failure report from Bill at Derive to use alongside the Townsville data when briefing Metro North</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Key Decisions</h3>
+        <ul class="decision-items">
+          <li>Ultralife declined to approve the NBO for the X5 AC hub-charging board change — no board redesign will ship before end of 2025</li>
+          <li>Adopted a revised strategy: sell X5 AC in current form to Metro North now, retrofit hub-charging circuit boards later once IEC-certified (~Feb 2027), with Karta covering the ~$15K certification cost</li>
+          <li>Signed with Marketing Success for SEO (same agency used for the Scott Clark website)</li>
+          <li>Ruled out the plastic cover option for the wall charger enclosure; proceeding with a metal box-style design, with one unpainted prototype to be fabricated first to validate fit</li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 
 </body>
