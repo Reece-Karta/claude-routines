@@ -32,6 +32,17 @@
       color: #636e72;
     }
 
+    .notice {
+      background: #fff8e1;
+      border: 1px solid #ffeaa7;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 0.85rem;
+      color: #6c5600;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
     .stats {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -277,9 +288,23 @@
   <header>
     <h1>Email Triage</h1>
     <div class="meta">
-      reece@kartahealthcare.com &middot; sales@kartahealthcare.com inbox not accessible (no delegate access) &middot; <span id="triage-date">3 Jul 2026, 7:10 AM AEST</span>
+      reece@ &amp; sales@kartahealthcare.com &middot; <span id="triage-date">4 Jul 2026, 7:09 AM AEST</span>
     </div>
   </header>
+
+  <div class="notice">
+    &#9888;&#65039; <strong>sales@kartahealthcare.com could not be reviewed</strong> &mdash; this account does not have delegate access to that mailbox (Graph returned a 404/forbidden on the Inbox folder). Everything below reflects <strong>reece@kartahealthcare.com</strong> only. Grant delegate/shared-mailbox access to include sales@ in future runs.
+  </div>
+
+  <!-- CALENDAR -->
+  <div class="calendar">
+    <div class="calendar-header">
+      <span class="badge">Today's Schedule</span>
+      <h2>0 meetings</h2>
+    </div>
+
+    <div class="calendar-empty">No meetings today</div>
+  </div>
 
   <div class="stats">
     <div class="stat-card urgent">
@@ -287,32 +312,16 @@
       <div class="label">Urgent</div>
     </div>
     <div class="stat-card action">
-      <div class="count" id="count-action">5</div>
+      <div class="count" id="count-action">2</div>
       <div class="label">Action Needed</div>
     </div>
     <div class="stat-card fyi">
-      <div class="count" id="count-fyi">2</div>
+      <div class="count" id="count-fyi">1</div>
       <div class="label">FYI</div>
     </div>
     <div class="stat-card low">
-      <div class="count" id="count-low">0</div>
+      <div class="count" id="count-low">1</div>
       <div class="label">Low Priority</div>
-    </div>
-  </div>
-
-  <!-- CALENDAR -->
-  <div class="calendar">
-    <div class="calendar-header">
-      <span class="badge">Today's Schedule</span>
-      <h2>1 meeting</h2>
-    </div>
-
-    <div class="meeting-card">
-      <div class="meeting-time">7:30 &ndash; 8:30 AM</div>
-      <div class="meeting-details">
-        <div class="meeting-title">Karta Healthcare - SEO Meeting</div>
-        <div class="meeting-meta">Zoom &middot; Jeff Jacobs (marketingsuccess.com)</div>
-      </div>
     </div>
   </div>
 
@@ -325,17 +334,15 @@
 
     <div class="email-card">
       <span class="inbox-badge primary">reece@</span>
-      <div class="subject">Power cord - first products</div>
-      <div class="from">From: Kim Marone &lt;kmarone@firstproducts.com&gt;</div>
-      <div class="summary">FIRST Products can't locate a power cord that tracking shows as delivered on 6/26 and needs a replacement shipped quickly for the Ultralife order.</div>
-      <div class="deadline">&#9200; Deadline mentioned: Needed quickly (no fixed date given)</div>
+      <div class="subject">David Immigration Law &mdash; outstanding $6,500 invoice for E-3 visa services</div>
+      <div class="from">From: Andrew David &lt;andrew@usaimmigration.law&gt;</div>
+      <div class="summary">Andrew is following up on the unpaid $6,500 LawPay invoice for the E-3 visa application and asking if you have any questions &mdash; a separate automated LawPay email with the payment link arrived the same day urging prompt payment.</div>
+      <div class="deadline">&#9200; Deadline mentioned: pay "as soon as possible"</div>
       <div class="draft-response">
         <div class="draft-label">Draft Response</div>
-        <div class="draft-text">Hi Kim,
+        <div class="draft-text">Hi Andrew,
 
-Sorry for the trouble &mdash; I'll get a replacement power cord out to you today via FedEx (no signature required, as discussed) so it doesn't get held up again. I'll send tracking as soon as it's booked.
-
-Thanks for your patience.
+Thanks for following up — no questions at this stage. I'll process the $6,500 payment via the LawPay link today and let you know once it's through.
 
 Regards,
 Reece</div>
@@ -352,82 +359,33 @@ Reece</div>
 
     <div class="email-card">
       <span class="inbox-badge primary">reece@</span>
-      <div class="subject">Re: Karta Investor Pitch Deck</div>
-      <div class="from">From: Murray Davidson &lt;murray@kartahealthcare.com&gt; (thread with Matt Cramsie)</div>
-      <div class="summary">Murray flagged that the drawers/seat product image isn't showing in the investor pitch deck, and Matt's original message is still waiting on Reece's review of the overall layout, flow and content.</div>
-      <div class="draft-response">
-        <div class="draft-label">Draft Response</div>
-        <div class="draft-text">Hi Murray, Matt,
-
-Thanks for the update &mdash; I'll take a look at the drawers/seat image issue and review the overall layout and content today, and send through any feedback.
-
-Regards,
-Reece</div>
-      </div>
-    </div>
-
-    <div class="email-card">
-      <span class="inbox-badge primary">reece@</span>
-      <div class="subject">opportunity - first products</div>
-      <div class="from">From: Kim Marone &lt;kmarone@firstproducts.com&gt;</div>
-      <div class="summary">Kim is requesting a proposal for a power supply solution to run a laptop and two monitors for 6&ndash;8 hours across a 60&ndash;70 unit lab deployment, with a fairly quick turnaround.</div>
-      <div class="draft-response">
-        <div class="draft-label">Draft Response</div>
-        <div class="draft-text">Hi Kim,
-
-Thanks for sending this through. Let me pull together a proposal for the power supply setup for the 60-70 units &mdash; I'll confirm run-time specs and get pricing and lead time back to you shortly.
-
-Regards,
-Reece</div>
-      </div>
-    </div>
-
-    <div class="email-card">
-      <span class="inbox-badge primary">reece@</span>
-      <div class="subject">David Immigration Law - Invoice for U.S. Immigration Services</div>
-      <div class="from">From: Andrew David &lt;andrew@usaimmigration.law&gt;</div>
-      <div class="summary">David Immigration Law has issued a $6,500 LawPay invoice for E-3 visa services and is asking for prompt payment to proceed to the next steps.</div>
-      <div class="deadline">&#9200; Deadline mentioned: ASAP</div>
-      <div class="draft-response">
-        <div class="draft-label">Draft Response</div>
-        <div class="draft-text">Hi Andrew,
-
-Thanks for the reminder &mdash; I'll process payment via the LawPay link today.
-
-Regards,
-Reece</div>
-      </div>
-    </div>
-
-    <div class="email-card">
-      <span class="inbox-badge primary">reece@</span>
-      <div class="subject">Karta Healthcare - Entity setup and Entity management</div>
+      <div class="subject">Foothold America &mdash; entity setup invoice &amp; tax adviser introduction</div>
       <div class="from">From: Laurie Spicer &lt;lspicer@footholdamerica.com&gt;</div>
-      <div class="summary">Foothold America has sent through their US entity setup and management proposal following last Tuesday's call, including a virtual Texas address option from $272/month.</div>
+      <div class="summary">Foothold America issued the invoice (INV3943.pdf) for the US entity setup — they can't begin onboarding until it's paid — and Laurie is separately asking whether you'd like an introduction to a US tax adviser.</div>
       <div class="draft-response">
         <div class="draft-label">Draft Response</div>
         <div class="draft-text">Hi Laurie,
 
-Thanks for putting this together &mdash; I'll review the entity setup and management proposal, including the Texas address option, and come back to you with any questions or to confirm next steps.
+Thanks for the update — I've received the invoice and will arrange payment shortly. Yes please, I'd appreciate an introduction to your tax adviser contact.
 
-Regards,
+Kind regards,
 Reece</div>
       </div>
     </div>
 
     <div class="email-card">
       <span class="inbox-badge primary">reece@</span>
-      <div class="subject">Re: Outerspace Design x Karta Healthcare</div>
+      <div class="subject">Outerspace Design &mdash; Fred Blochinger visiting Brisbane Monday</div>
       <div class="from">From: Rish Sahi &lt;rsahi@outerspace.co&gt;</div>
-      <div class="summary">Rish wants to arrange for Outerspace Design founder Fred Blochinger to visit Reece or Murray in Brisbane while he's in town.</div>
+      <div class="summary">Outerspace's founder Fred Blochinger will be in Brisbane on Monday 6 July and Rish is asking if you or Murray can meet to discuss competitive products and hospital-setting experience.</div>
       <div class="deadline">&#9200; Deadline mentioned: Monday, 6 July 2026</div>
       <div class="draft-response">
         <div class="draft-label">Draft Response</div>
         <div class="draft-text">Hi Rish,
 
-Monday 6 July should work &mdash; let me confirm a specific time with Murray and get back to you shortly so we can lock in a visit with Fred.
+Great, I'd be glad to meet Fred while he's in Brisbane on Monday. Late morning or early afternoon would suit me best — let me know what works for his schedule and I'll lock it in with Murray.
 
-Regards,
+Best regards,
 Reece</div>
       </div>
     </div>
@@ -442,16 +400,24 @@ Reece</div>
 
     <div class="email-card">
       <span class="inbox-badge primary">reece@</span>
-      <div class="subject">RE: FHP PO 2960576</div>
-      <div class="from">From: Kim Marone &lt;kmarone@firstproducts.com&gt;</div>
-      <div class="summary">Kim confirmed the battery shipment for PO 2960576 was delivered and the earlier signature/delivery hiccup has worked itself out, no further action needed.</div>
+      <div class="subject">Malaysia shipment &mdash; go-ahead confirmed</div>
+      <div class="from">From: Eamonn McWilliam &lt;eamonn@kartahealthcare.com&gt;</div>
+      <div class="summary">Eamonn confirmed to proceed with the Port Klang sailing to get stock to Malaysia in time for the trade show — no further action needed from you, decision already made.</div>
+    </div>
+  </div>
+
+  <!-- LOW PRIORITY -->
+  <div class="category low">
+    <div class="category-header">
+      <span class="badge low">Low Priority</span>
+      <h2>When you get a chance</h2>
     </div>
 
     <div class="email-card">
       <span class="inbox-badge primary">reece@</span>
-      <div class="subject">David Immigration Law - Follow Up Regarding Letter of Engagement / DocuSign</div>
-      <div class="from">From: Andrew David &lt;andrew@usaimmigration.law&gt;</div>
-      <div class="summary">Andrew sent a courtesy follow-up about the Letter of Engagement, which DocuSign confirms was already completed earlier the same day.</div>
+      <div class="subject">Consulting opportunity &mdash; Patient Transport Equipment Market</div>
+      <div class="from">From: Stratos Karavanis &lt;stratos.karavanis@dialecticanet.com&gt;</div>
+      <div class="summary">Dialectica is offering paid compensation for a short consulting call about trends in the patient transport equipment market — optional, no deadline.</div>
     </div>
   </div>
 
