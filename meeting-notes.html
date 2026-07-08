@@ -198,21 +198,21 @@
   <header>
     <h1>Meeting Notes</h1>
     <div class="meta">
-      Karta Healthcare &middot; <span id="export-date">7 Jul 2026</span>
+      Karta Healthcare &middot; <span id="export-date">8 Jul 2026</span>
     </div>
   </header>
 
   <div class="stats">
     <div class="stat-card meetings">
-      <div class="count" id="count-meetings">1</div>
+      <div class="count" id="count-meetings">3</div>
       <div class="label">Meetings</div>
     </div>
     <div class="stat-card actions">
-      <div class="count" id="count-actions">6</div>
+      <div class="count" id="count-actions">9</div>
       <div class="label">Action Items</div>
     </div>
     <div class="stat-card decisions">
-      <div class="count" id="count-decisions">5</div>
+      <div class="count" id="count-decisions">6</div>
       <div class="label">Decisions</div>
     </div>
   </div>
@@ -220,50 +220,104 @@
   <div class="meeting-section">
 
     <div class="meeting-card">
-      <div class="meeting-title">Karta-NX manufacturing move to China — pricing, tooling transfer, and Taiwan handover with James</div>
-      <div class="meeting-time">7 Jul 2026, 12:28 PM AEST</div>
+      <div class="meeting-title">X5 AC board upgrade and market defense against Ergotron</div>
+      <div class="meeting-time">8 Jul 2026, 7:03 AM AEST</div>
 
       <div class="attendees">
         <span class="attendee-chip">Reece Munro</span>
-        <span class="attendee-chip">James</span>
+        <span class="attendee-chip">Mike</span>
+        <span class="attendee-chip">Jason</span>
+        <span class="attendee-chip">Aemon</span>
       </div>
 
       <div class="subsection summary">
         <h3>Summary</h3>
         <ul>
-          <li>Decision confirmed to move Karta-NX manufacturing to China, to Leo's facility in Suzhou — a well-credentialed manufacturer (supplies Philips, Siemens, BMW) with a tight, localized supply chain</li>
-          <li>Cost reduction of ~40–45% versus current Taiwan production: landed cost ~$350 (incl. case/packaging) vs. ~$1,200 currently (without battery), making a ~$750 reseller price point achievable</li>
-          <li>Murray informed Max at Machan on Friday; Max was disappointed but understood the rationale, and is relieved the tooling is going to China rather than a local competitor</li>
-          <li>Machan is reviewing on-hand components to determine how many carts remain buildable (Reece suspects effectively zero) and is doing a full stock recount before invoicing Karta; Murray gave them until end of this week</li>
-          <li>Preference is to ship all semi-finished components directly to China rather than assemble remaining units in Taiwan, consolidating everything into a single container shipment</li>
-          <li>Tooling consolidation is tricky since tools sit across separate facilities; options include consolidating at Machan (if they agree) or via a third-party warehouse, with Scott/Sigma as a last-resort backup</li>
-          <li>China factory build-out revised down to ~2 months from receipt of tooling; overall target is 3 months total (1 month transfer + 2 months China prep)</li>
-          <li>Market feedback from James's clients (Taiwan, Middle East, Kenya) says pricing is too high; the China move should get Karta to a competitive ~$800 end-user price while positioning between Machan and Ergotron rather than competing on price alone</li>
-          <li>Website still needs more clinical benefit content and case studies; an SEO agency has been engaged and case studies are in progress</li>
-          <li>Murray and Reece want a short thank-you call with Scott (Sigma) to keep the door open for future collaboration</li>
+          <li>Ergotron is actively targeting Karta's AC swappable market in Queensland, exploiting the gap that the X5 requires mains plug-in to charge its swappable battery; ~3,500 AC units in Queensland are at risk</li>
+          <li>Prince Charles (Metro North) tender already specifies Ergotron's Live Connect by name and is likely lost; Metro South (1,000+ active AC systems) is the next major exposure</li>
+          <li>Queensland's procurement model blocks pairing new purchases with the X5 Super Light, locking sites to power-hungry legacy Dell all-in-ones that Super Light can't support</li>
+          <li>Core ask: back-port the "hold-up battery charges from swappable battery" feature from the new inverter design into the existing Triplight AC board, rather than waiting ~12 months for the new inverter to ship to Australia</li>
+          <li>Board upgrade would also enable retrofitting 2,000+ fielded Queensland units — framed as a ~$10-20K certification cost against the risk of losing refresh on 3,500 systems</li>
+          <li>Mike flagged that cross-team communication has been poor and previously-agreed monthly product meetings never happened, partly explaining the inverter timeline slippage</li>
+          <li>US expansion update: entity setup 2-3 weeks out, targeting October in-country presence; new Super Light web pages and a 6-week/15,000-contact email campaign launch this week</li>
         </ul>
       </div>
 
       <div class="subsection">
         <h3>Action Items</h3>
         <ul class="action-items">
-          <li><span class="owner">Reece:</span> Confirm with Murray whether James was mentioned to Max on Friday's call, and raise it on the end-of-week call if not</li>
-          <li><span class="owner">Reece:</span> Join the end-of-week call with Machan to discuss parts inventory and component value</li>
-          <li><span class="owner">James:</span> Contact Emma at Kelly's about lessons learned from their previous tooling transfer</li>
-          <li><span class="owner">James:</span> Explore third-party warehouse options for tooling consolidation in Taiwan</li>
-          <li><span class="owner">James:</span> Facilitate a short call with Scott (Sigma) for Reece and Murray, early next week</li>
-          <li><span class="owner">James:</span> Check with Unicare on their interest in a Karta-NX sample</li>
+          <li><span class="owner">Reece &amp; Aemon:</span> Prepare a written brief covering desired timeline, acceptable timeline, and full market context for the board upgrade request — due end of week</li>
+          <li><span class="owner">Jason:</span> Route the brief through MBO to Mike</li>
+          <li><span class="owner">Team:</span> Schedule an early-next-week meeting with engineering (Leon, Brett, Hari) to kick off monthly product-specific syncs and review the inverter project plan</li>
         </ul>
       </div>
 
       <div class="subsection">
         <h3>Key Decisions</h3>
         <ul class="decision-items">
-          <li>Confirmed the move of Karta-NX manufacturing to China, to Leo's organization in Suzhou</li>
-          <li>Semi-finished components will be shipped directly to China rather than assembled into remaining units in Taiwan</li>
-          <li>Tooling will move in a single container shipment, consolidating with any leftover Machan components where possible</li>
-          <li>Overall project target set at 3 months total (1 month tooling transfer + 2 months China prep)</li>
-          <li>Karta will position pricing between Machan and Ergotron rather than competing directly on Machan's price point</li>
+          <li>Escalate the AC board back-port request to Mike as a written, formally-routed brief rather than an informal ask</li>
+          <li>Reinstate monthly cross-team product meetings, with Leon added as a permanent attendee going forward</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="meeting-card">
+      <div class="meeting-title">Karta Jr foot design and stability testing — 450mm base, weight distribution, and IEC 60601 certification</div>
+      <div class="meeting-time">8 Jul 2026, 10:00 AM AEST</div>
+
+      <div class="attendees">
+        <span class="attendee-chip">Reece Munro</span>
+        <span class="attendee-chip">Matt</span>
+      </div>
+
+      <div class="subsection summary">
+        <h3>Summary</h3>
+        <ul>
+          <li>New website product pages are built and in draft; going live once the X5-SuperLite animation is ready (expected within a day or two), then handed off to Jeff for ongoing updates</li>
+          <li>Ultralife likes the animation but won't share sales-enablement costs, though it will co-fund trade shows; royalty-based usage remains the model, with no exclusivity</li>
+          <li>Karta Jr. foot footprint set at 450 x 450mm, accepting reduced differentiation from the NX (only 30mm); a lower-height profile was preferred to reduce bulk while keeping family resemblance</li>
+          <li>Ballast plan: 8mm steel plates under the foot (best density-to-cost ratio) plus optional steel bars in the leg extrusion channels (up to ~4kg extra); extra plates to be ordered for in-house stability testing</li>
+          <li>IEC 60601 certification: pursuing official certification for NX; HUI identified as a specialist testing contact but also a competing cart manufacturer, so no confidential IP will be shared with them; Karta Jr. LCD certification remains unresolved and may require the larger NX foot</li>
+          <li>Manufacturing move: Murray handed the Machan/Max conversation to Reece; James proposed as an on-the-ground China transition consultant; Machan's offer to collaborate on drawer tooling was seen as commercially impractical</li>
+          <li>Fold-out seat design process debate: Matt wants a first-principles/CTQ document before locking in a design direction; Reece prefers Leo build a functional mechanism first and refine aesthetics after; agreed the current sample is for internal review only</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Action Items</h3>
+        <ul class="action-items">
+          <li><span class="owner">Matt:</span> Publish new website pages once the SuperLite animation is complete, then hand off to Jeff</li>
+          <li><span class="owner">Reece:</span> Contact HUI to schedule a call early next week on IEC 60601 feasibility for a non-powered cart</li>
+          <li><span class="owner">Reece:</span> Email Max to confirm the Machan move and introduce James as transition consultant</li>
+          <li><span class="owner">Matt:</span> Calculate available ballast weight capacity (steel plate + extrusion channel bars) in SolidWorks</li>
+          <li><span class="owner">Matt:</span> Raise standard bar stock pricing for extrusion ballast with Martin and Leo on today's 3pm call</li>
+          <li><span class="owner">Matt:</span> Prepare a first-principles and CTQ one-pager for the cable management product</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Key Decisions</h3>
+        <ul class="decision-items">
+          <li>Proceed with the 450 x 450mm foot footprint, accepting reduced NX differentiation</li>
+          <li>Proceed with a lower-height foot profile and 8mm steel ballast plates; order extra plates for in-house testing</li>
+          <li>Sample builds are for internal review first; customer-facing quality is treated as a separate, later bar</li>
+          <li>Adopt a first-principles + CTQ one-pager process per product, starting with cable management, rather than a formal sign-off process</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="meeting-card">
+      <div class="meeting-title">Tooling move to China, accessories order, and Karta Junior feet prototype</div>
+      <div class="meeting-time">8 Jul 2026, 3:04 PM AEST</div>
+
+      <div class="attendees">
+        <span class="attendee-chip">Reece Munro</span>
+      </div>
+
+      <div class="subsection summary">
+        <h3>Summary</h3>
+        <ul>
+          <li>No AI-generated summary or transcript was available for this meeting (transcript access requires a paid Granola tier)</li>
         </ul>
       </div>
     </div>
