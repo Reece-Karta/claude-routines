@@ -198,28 +198,74 @@
   <header>
     <h1>Meeting Notes</h1>
     <div class="meta">
-      Karta Healthcare &middot; <span id="export-date">25 Jul 2026</span>
+      Karta Healthcare &middot; <span id="export-date">28 Jul 2026</span>
     </div>
   </header>
 
   <div class="stats">
     <div class="stat-card meetings">
-      <div class="count" id="count-meetings">0</div>
+      <div class="count" id="count-meetings">1</div>
       <div class="label">Meetings</div>
     </div>
     <div class="stat-card actions">
-      <div class="count" id="count-actions">0</div>
+      <div class="count" id="count-actions">6</div>
       <div class="label">Action Items</div>
     </div>
     <div class="stat-card decisions">
-      <div class="count" id="count-decisions">0</div>
+      <div class="count" id="count-decisions">4</div>
       <div class="label">Decisions</div>
     </div>
   </div>
 
   <div class="meeting-section">
 
-    <div class="empty-state">No meetings recorded today</div>
+    <div class="meeting-card">
+      <div class="meeting-title">T28 and T29 Install Guides — FDA Vitals Certification, Setup, and Dashboard Walkthrough with Corey</div>
+      <div class="meeting-time">28 Jul 2026, 9:52 AM GMT+10</div>
+
+      <div class="attendees">
+        <span class="attendee-chip">Reece Munro</span>
+        <span class="attendee-chip">Corey (CASPER)</span>
+      </div>
+
+      <div class="subsection summary">
+        <h3>Summary</h3>
+        <ul>
+          <li>FDA process for the vitals sensor covers data quality (no issues) and device security (tighter Bluetooth pairing requirements — secure connection with PIN, anti-replay); firmware changes are in progress with FDA clearance expected by end of September 2026</li>
+          <li>Once cleared, the vitals sensor becomes prescription-only (Rx) via a licensed DME provider or pharmacy, commanding a higher price, while a non-prescription version remains available in parallel</li>
+          <li>Fall detection and non-cleared vitals sensors are currently unregulated in the US; FDA certification is being pursued as a strategic economic play (competitive moat) rather than a compliance necessity</li>
+          <li>Reece has a TGA consultant contact in Australia; plan is for the consultant to speak with CASPER's Scott and/or Corey to determine what Australian certification is needed and what can be leveraged from the US FDA work</li>
+          <li>Walked through the T28 room monitor install: corner mount, 7-step guided process, 2.4 GHz Wi-Fi requirement, LED pairing sequence, room-dimension configuration, and ~40 second calibration</li>
+          <li>Walked through the T29 overbed monitor install: pillow-top mount creating a cone detection zone, rear activation button, no room dimensions required, same discovery/pairing/calibration flow as T28</li>
+          <li>Typical bundle install (2x T28 + 1x T29 per room) takes 15-20 minutes plus wire management; pre-discovering devices before deployment cuts on-site time</li>
+          <li>Bandwidth is low per sensor (hundreds of bits/second at rest; ~1 Mbps supports ~300 sensors); vitals data tolerates occasional packet loss; CASPER to send full bandwidth spec FAQ</li>
+          <li>Current dashboard is in demo/evaluation mode for Debetrek with instant alert feedback and a 24-hour reset; real clinical testing will use a separate "Debetrek Long-Term Care" community with a 48-hour AI/ML learning period</li>
+          <li>Credentials sent ~1 week ago were likely quarantined by Microsoft 365; CASPER will resend with Android and iOS (sideload) links</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Action Items</h3>
+        <ul class="action-items">
+          <li><span class="owner">Reece:</span> Check Microsoft 365 spam/quarantine and confirm receipt of resent CASPER login credentials</li>
+          <li><span class="owner">Reece:</span> Share MAC addresses of sensors intended for clinical deployment with CASPER</li>
+          <li><span class="owner">Reece:</span> Connect the TGA consultant with Scott and/or Corey at CASPER to scope the Australian regulatory pathway</li>
+          <li><span class="owner">CASPER:</span> Resend login credentials with a heads-up email (Android link and iOS secure sideload link)</li>
+          <li><span class="owner">CASPER:</span> Send T28/T29 install guide PDFs to all meeting attendees</li>
+          <li><span class="owner">CASPER:</span> Set up the second "Debetrek Long-Term Care" production dashboard</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Key Decisions</h3>
+        <ul class="decision-items">
+          <li>A separate "Debetrek Long-Term Care" production community will be created for real clinical testing, distinct from the current demo/evaluation dashboard</li>
+          <li>All Karta/Debetrek users will be granted highest-level dashboard access, with granular permissions configurable later</li>
+          <li>FDA certification will be pursued as a strategic/competitive investment rather than a strict current requirement, since fall detection and non-cleared vitals remain unregulated</li>
+          <li>Reece's TGA consultant will engage directly with CASPER's Scott and/or Corey to scope the Australian certification pathway</li>
+        </ul>
+      </div>
+    </div>
 
   </div>
 
