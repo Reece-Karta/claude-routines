@@ -198,7 +198,7 @@
   <header>
     <h1>Meeting Notes</h1>
     <div class="meta">
-      Karta Healthcare &middot; <span id="export-date">28 Jul 2026</span>
+      Karta Healthcare &middot; <span id="export-date">29 Jul 2026</span>
     </div>
   </header>
 
@@ -208,11 +208,11 @@
       <div class="label">Meetings</div>
     </div>
     <div class="stat-card actions">
-      <div class="count" id="count-actions">6</div>
+      <div class="count" id="count-actions">3</div>
       <div class="label">Action Items</div>
     </div>
     <div class="stat-card decisions">
-      <div class="count" id="count-decisions">4</div>
+      <div class="count" id="count-decisions">3</div>
       <div class="label">Decisions</div>
     </div>
   </div>
@@ -220,49 +220,44 @@
   <div class="meeting-section">
 
     <div class="meeting-card">
-      <div class="meeting-title">T28 and T29 Install Guides — FDA Vitals Certification, Setup, and Dashboard Walkthrough with Corey</div>
-      <div class="meeting-time">28 Jul 2026, 9:52 AM GMT+10</div>
+      <div class="meeting-title">27-Inch and 24-Inch Workstation Specs with Danielle</div>
+      <div class="meeting-time">29 Jul 2026, 12:25 PM GMT+10</div>
 
       <div class="attendees">
         <span class="attendee-chip">Reece Munro</span>
-        <span class="attendee-chip">Corey (CASPER)</span>
+        <span class="attendee-chip">Danielle</span>
       </div>
 
       <div class="subsection summary">
         <h3>Summary</h3>
         <ul>
-          <li>FDA process for the vitals sensor covers data quality (no issues) and device security (tighter Bluetooth pairing requirements — secure connection with PIN, anti-replay); firmware changes are in progress with FDA clearance expected by end of September 2026</li>
-          <li>Once cleared, the vitals sensor becomes prescription-only (Rx) via a licensed DME provider or pharmacy, commanding a higher price, while a non-prescription version remains available in parallel</li>
-          <li>Fall detection and non-cleared vitals sensors are currently unregulated in the US; FDA certification is being pursued as a strategic economic play (competitive moat) rather than a compliance necessity</li>
-          <li>Reece has a TGA consultant contact in Australia; plan is for the consultant to speak with CASPER's Scott and/or Corey to determine what Australian certification is needed and what can be leveraged from the US FDA work</li>
-          <li>Walked through the T28 room monitor install: corner mount, 7-step guided process, 2.4 GHz Wi-Fi requirement, LED pairing sequence, room-dimension configuration, and ~40 second calibration</li>
-          <li>Walked through the T29 overbed monitor install: pillow-top mount creating a cone detection zone, rear activation button, no room dimensions required, same discovery/pairing/calibration flow as T28</li>
-          <li>Typical bundle install (2x T28 + 1x T29 per room) takes 15-20 minutes plus wire management; pre-discovering devices before deployment cuts on-site time</li>
-          <li>Bandwidth is low per sensor (hundreds of bits/second at rest; ~1 Mbps supports ~300 sensors); vitals data tolerates occasional packet loss; CASPER to send full bandwidth spec FAQ</li>
-          <li>Current dashboard is in demo/evaluation mode for Debetrek with instant alert feedback and a 24-hour reset; real clinical testing will use a separate "Debetrek Long-Term Care" community with a 48-hour AI/ML learning period</li>
-          <li>Credentials sent ~1 week ago were likely quarantined by Microsoft 365; CASPER will resend with Android and iOS (sideload) links</li>
+          <li>27" all-in-one is at concept stage; a physical sample is being built and shipped for review — 4K touch display, Panther Lake CPU, 32GB RAM, 512GB SSD (expandable to 1TB), Wi-Fi 6, Bluetooth 6, dual 3W speakers, medical-grade 19V/120W power adapter, IP65-rated front, camera and microphone included as standard</li>
+          <li>Optional add-ons (not standard): RFID module, UPS battery, PCIe slot, IEC 60601 medical certification</li>
+          <li>IEC 60601 isn't mandatory in the tender spec, but the team agreed to plan for it; Danielle to price both with and without the certification, which takes 2–3 months</li>
+          <li>24" unit already has 60601 certification in process — draft cert available first, official cert about a month later; the sample can be used for customer demos in the interim</li>
+          <li>Sample delivery targeted for ~2 months out (September 2026); sample price ~$3,000, with mass production pricing ~30% lower</li>
+          <li>Logo placement agreed on the front bezel (black area, bottom center) — no tooling cost at 1K+ MOQ; rear/panel customization would require 1K MOQ and tooling cost</li>
+          <li>4 samples needed in total (1 already on hand, 3 more to order)</li>
+          <li>Tender is with New South Wales Health Service — the largest single health service in Australia, on a 5-year agreement — response due next week on a very tight timeline</li>
+          <li>US market flagged as a future expansion target</li>
         </ul>
       </div>
 
       <div class="subsection">
         <h3>Action Items</h3>
         <ul class="action-items">
-          <li><span class="owner">Reece:</span> Check Microsoft 365 spam/quarantine and confirm receipt of resent CASPER login credentials</li>
-          <li><span class="owner">Reece:</span> Share MAC addresses of sensors intended for clinical deployment with CASPER</li>
-          <li><span class="owner">Reece:</span> Connect the TGA consultant with Scott and/or Corey at CASPER to scope the Australian regulatory pathway</li>
-          <li><span class="owner">CASPER:</span> Resend login credentials with a heads-up email (Android link and iOS secure sideload link)</li>
-          <li><span class="owner">CASPER:</span> Send T28/T29 install guide PDFs to all meeting attendees</li>
-          <li><span class="owner">CASPER:</span> Set up the second "Debetrek Long-Term Care" production dashboard</li>
+          <li><span class="owner">Danielle:</span> Send the 27" spec document and pricing today, including sample price (~$3K), mass production pricing, and both 60601 and non-60601 options</li>
+          <li><span class="owner">Reece:</span> Confirm the sample order in writing — 3 additional 27" samples, plus confirm 24" sample quantities for the NSW tender</li>
+          <li><span class="owner">Reece:</span> Submit the NSW Health tender response, due next week</li>
         </ul>
       </div>
 
       <div class="subsection">
         <h3>Key Decisions</h3>
         <ul class="decision-items">
-          <li>A separate "Debetrek Long-Term Care" production community will be created for real clinical testing, distinct from the current demo/evaluation dashboard</li>
-          <li>All Karta/Debetrek users will be granted highest-level dashboard access, with granular permissions configurable later</li>
-          <li>FDA certification will be pursued as a strategic/competitive investment rather than a strict current requirement, since fall detection and non-cleared vitals remain unregulated</li>
-          <li>Reece's TGA consultant will engage directly with CASPER's Scott and/or Corey to scope the Australian certification pathway</li>
+          <li>Plan to price and pursue IEC 60601 certification for the 27" unit even though it isn't mandatory in the tender spec</li>
+          <li>Logo placement agreed: front bezel (black area, bottom center), not the rear cover</li>
+          <li>4 samples needed in total — 1 on hand plus 3 to be ordered</li>
         </ul>
       </div>
     </div>
