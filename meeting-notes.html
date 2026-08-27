@@ -198,28 +198,119 @@
   <header>
     <h1>Meeting Notes</h1>
     <div class="meta">
-      Karta Healthcare &middot; <span id="export-date">12 Aug 2026</span>
+      Karta Healthcare &middot; <span id="export-date">27 Aug 2026</span>
     </div>
   </header>
 
   <div class="stats">
     <div class="stat-card meetings">
-      <div class="count" id="count-meetings">0</div>
+      <div class="count" id="count-meetings">2</div>
       <div class="label">Meetings</div>
     </div>
     <div class="stat-card actions">
-      <div class="count" id="count-actions">0</div>
+      <div class="count" id="count-actions">12</div>
       <div class="label">Action Items</div>
     </div>
     <div class="stat-card decisions">
-      <div class="count" id="count-decisions">0</div>
+      <div class="count" id="count-decisions">9</div>
       <div class="label">Decisions</div>
     </div>
   </div>
 
   <div class="meeting-section">
 
-    <div class="empty-state">No meetings recorded today</div>
+    <div class="meeting-card">
+      <div class="meeting-title">Taiwan Trip Debrief: Tooling, Manufacturing &amp; Partner Review</div>
+      <div class="meeting-time">27 Aug 2026, 12:32 PM GMT+10</div>
+
+      <div class="attendees">
+        <span class="attendee-chip">Reece Munro</span>
+      </div>
+
+      <div class="subsection summary">
+        <h3>Summary</h3>
+        <ul>
+          <li>Visited Kelly's (Machan Taiwan) with James to review the HD unit and baskets — samples arrive tomorrow, with a ~4-week production run for 20 units once approved.</li>
+          <li>Tooling move to China faces a major friction point: customs flags "used tools," which can add 4-6 weeks to clearance unless pre-inspected, polished, and photographed.</li>
+          <li>Machan China factory visit raised serious concerns: limited in-house capability (sheet metal and powder coating only), inadequate QC (rejects just re-run, no environmental controls), and a Karta sample arrived with an unscrewed drawer runner and a backwards keyboard tray that nobody on their team noticed. Still no pricing after a month.</li>
+          <li>Inventech: moving forward on a 27-inch clinical all-in-one for the Australian market, with a trade deal and confirmed branding.</li>
+          <li>Vision Tooling factory visit was impressive — ~300 staff, 5,000-ton injection machines (~5x Marty/Leo's capacity), clean indoor assembly, and broader ISO certification (including 13485). Filed as a potential future tooling partner, likely routed through Marty.</li>
+          <li>Keyboard tray stabilization: explored a rudder/fin channel concept and a preferred plastic glide option with Leo; recommend 3D printing a test piece. Draw runner tightening alone likely won't fully solve the issue.</li>
+          <li>Work surface flatness remains unresolved — a sheet metal backing plate or thicker ribs are both under consideration, with a risk of sink marks from thicker ribs.</li>
+          <li>Urgent: Debetrek may need 500 carts within 8 weeks. Tooling move is on hold for a week pending the outcome of tomorrow's Sydney presentation; contingency plan is to use the 620 gas legs already in stock.</li>
+          <li>Comparing the cost of remaking tooling entirely (Marty quoted USD $132k) against transferring existing tools (~USD $20k+ in logistics/customs) given the transfer risk and timeline pressure.</li>
+          <li>James has set up a company with an ex-Sigma associate in a space that looks close to Karta's product line — likely to be selling a competing cart within 12 months. Plan is to move him from a retainer to a formal reseller arrangement.</li>
+          <li>Macron Group (Hans): battery all-in-one remains hard to sell against DT Research (2 batteries vs. 3), despite comparable or higher pricing. 27-inch all-in-one opportunity is closed — Karta found an alternate supplier.</li>
+        </ul>
+      </div>
+
+      <div class="subsection action-items-section">
+        <h3>Action Items</h3>
+        <ul class="action-items">
+          <li>Review and approve the HD sample on arrival — triggers the ~4-week production run of 20 units.</li>
+          <li><span class="owner">Reece:</span> Meet with Murray and make the final China tooling decision (Monday); formal answer to Machan China expected shortly after.</li>
+          <li><span class="owner">Reece:</span> Confirm the Debetrek 500-cart requirement after tomorrow's Sydney presentation.</li>
+          <li><span class="owner">Reece:</span> Run the numbers on remaking tools (USD $132k quoted) vs. transferring existing tools before Monday.</li>
+          <li>Prioritize the keyboard tray glide fix with Leo — 3D print a U-shaped glide prototype to test before committing to tooling changes.</li>
+          <li><span class="owner">Reece:</span> Transition James from retainer to a formal reseller model given the conflict-of-interest risk.</li>
+          <li>Build an internal onboarding resource for resellers, covering brand story and points of difference.</li>
+          <li><span class="owner">Reece:</span> Send Hans information on the competing 27-inch supplier for Macron to benchmark.</li>
+          <li>Reschedule tomorrow's call with Marty/Leo to next Wednesday (Reece and Aan at the eHealth presentation; Murray also away).</li>
+        </ul>
+      </div>
+
+      <div class="subsection decisions-section">
+        <h3>Key Decisions</h3>
+        <ul class="decision-items">
+          <li>Agreed a trade deal with Inventech: 2 Karta carts for 2 x 27-inch all-in-ones (~USD $2,500 each); branding confirmed as a color badge under the glass, centered at the bottom.</li>
+          <li>Moving forward with Inventech on a 27-inch clinical all-in-one built for the Australian market.</li>
+          <li>Preferred keyboard tray fix is the plastic glide over the back edge, over the rudder/fin channel concept.</li>
+          <li>Tooling move to China placed on hold for one week pending the Debetrek order outcome.</li>
+          <li>Vision Tooling filed away as a potential future tooling partner, to be routed through Marty rather than engaged directly.</li>
+          <li>27-inch all-in-one opportunity with Macron (Hans) considered closed — Karta sourced an alternate supplier.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="meeting-card">
+      <div class="meeting-title">Karta-NX IEC 60601 Certification Pathway with Melina</div>
+      <div class="meeting-time">27 Aug 2026, 7:00 AM GMT+10</div>
+
+      <div class="attendees">
+        <span class="attendee-chip">Reece Munro</span>
+        <span class="attendee-chip">Melina (Mecca)</span>
+      </div>
+
+      <div class="subsection summary">
+        <h3>Summary</h3>
+        <ul>
+          <li>Karta-NX is a non-powered cart; Ultralife's X5 power system already holds its own IEC 60601 certification, but Australian tender processes are asking for the cert on the cart itself.</li>
+          <li>Mecca can evaluate the non-powered cart against IEC 60601-1 with mechanical tests only (stability, sliding, label durability/legibility) — physical testing is identical regardless of documentation depth.</li>
+          <li>Two deliverable options: a 1-2 page letter report (under $1,000) vs. a full ~150-page Test Report Form (~$8,000), of which ~85% would be not applicable for a non-powered cart.</li>
+          <li>No additional 60601-1 testing needed when combining cart and power system, provided mechanical testing covers all mounting configurations and the cart adds no electrical components — this differs from Australia's AS/NZS 3551, which requires combined testing.</li>
+          <li>Labels need updating regardless (a patent number must now be visible); label durability testing is worth including in scope, and failed labels wouldn't require full cart re-submission.</li>
+          <li>NRTL/UL marking is a separate North America-only program requiring ongoing audits — not in scope for now, but worth investigating given Karta's new US entity.</li>
+        </ul>
+      </div>
+
+      <div class="subsection action-items-section">
+        <h3>Action Items</h3>
+        <ul class="action-items">
+          <li><span class="owner">Melina:</span> Send a quote to Reece covering the letter report as a baseline.</li>
+          <li>Decide internally on letter report vs. full TRF over the next few days before confirming scope with Mecca.</li>
+          <li><span class="owner">Melina:</span> Investigate whether NRTL/UL component certification has precedent for non-powered carts and report back.</li>
+        </ul>
+      </div>
+
+      <div class="subsection decisions-section">
+        <h3>Key Decisions</h3>
+        <ul class="decision-items">
+          <li>Leaning toward the letter report over the full TRF, given how electrical-heavy the standard's full documentation is relative to a non-powered cart.</li>
+          <li>Label durability testing will be included in the scope of the Mecca engagement.</li>
+          <li>NRTL/UL marking confirmed out of scope for now.</li>
+        </ul>
+      </div>
+    </div>
 
   </div>
 
