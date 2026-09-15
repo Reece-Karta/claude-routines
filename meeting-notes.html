@@ -198,28 +198,118 @@
   <header>
     <h1>Meeting Notes</h1>
     <div class="meta">
-      Karta Healthcare &middot; <span id="export-date">14 Sep 2026</span>
+      Karta Healthcare &middot; <span id="export-date">15 Sep 2026</span>
     </div>
   </header>
 
   <div class="stats">
     <div class="stat-card meetings">
-      <div class="count" id="count-meetings">0</div>
+      <div class="count" id="count-meetings">2</div>
       <div class="label">Meetings</div>
     </div>
     <div class="stat-card actions">
-      <div class="count" id="count-actions">0</div>
+      <div class="count" id="count-actions">11</div>
       <div class="label">Action Items</div>
     </div>
     <div class="stat-card decisions">
-      <div class="count" id="count-decisions">0</div>
+      <div class="count" id="count-decisions">8</div>
       <div class="label">Decisions</div>
     </div>
   </div>
 
   <div class="meeting-section">
 
-    <div class="empty-state">No meetings recorded today</div>
+    <div class="meeting-card">
+      <div class="meeting-title">LCD Mount Production — Testing Feedback, Tooling, and 1,040-Unit Order with Emma</div>
+      <div class="meeting-time">15 Sep 2026 &middot; 11:29 AM GMT+10</div>
+      <div class="attendees">
+        <span class="attendee-chip">Reece Munro</span>
+        <span class="attendee-chip">Matt</span>
+        <span class="attendee-chip">Emma</span>
+      </div>
+
+      <div class="subsection summary">
+        <h3>Summary</h3>
+        <ul>
+          <li>Reviewed all 3 LCD mount samples: overall verdict is happy with the samples, ready to proceed to production</li>
+          <li>Cable cover has minor sharp edges on top and side (not a safety issue, flagged for QC); VESA mount finish approved</li>
+          <li>Small click/detent felt in pan rotation at zero position (disappears under load) — caused by POM plastic in the pivot, confirmed by supplier</li>
+          <li>Security latch mechanism was missing from samples (supplier oversight); decided not to include it in production due to tight timeline, low necessary force to bypass, and tool-required top cap removal — a caution sticker will be used instead</li>
+          <li>Top cap to get a moulded "front" arrow/text indicator on the underside, pending supplier confirmation that tooling changes won't cause delays</li>
+          <li>Hardware package will include only the 2 tilt-tensioning wrenches (other screws already in the cart package); a 5mm Allen key may also be added</li>
+          <li>Skipping the 20-piece low-volume run — going straight to full production of 1,040 pieces (300 to Australia, 700 to Suzhou factory, 120 to the US), Australia target end of October 2026</li>
+          <li>Tilt mechanism cycle testing at 5,600 of a 10,000–50,000 cycle target, expecting ~9,000 by end of week; full report due end of week</li>
+          <li>Tooling transfer from Taiwan to China cancelled — new toolset being made in China instead, with Taiwan capacity retained as backup</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Action Items</h3>
+        <ul class="action-items">
+          <li><span class="owner">Matt:</span> Send cable cover defect photos to supplier for QC review</li>
+          <li><span class="owner">Matt:</span> Design caution sticker and top cap front-indicator artwork</li>
+          <li><span class="owner">Reece:</span> Confirm hardware package contents via WhatsApp, including whether the 5mm Allen key is needed</li>
+          <li><span class="owner">Reece:</span> Confirm Suzhou factory can order directly from supplier (target: 16 Sep 2026)</li>
+          <li><span class="owner">Emma:</span> Send revised quote for 1,000 pieces with no security mechanism</li>
+          <li><span class="owner">Emma:</span> Confirm lead time for the 300-unit Australia shipment by end of October</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Key Decisions</h3>
+        <ul class="decision-items">
+          <li>Approved all 3 LCD mount samples for production</li>
+          <li>Security latch mechanism will not be included in production; a caution sticker will be used instead</li>
+          <li>Skipping the 20-piece low-volume run and proceeding straight to full production of 1,040 units</li>
+          <li>Cancelled the Taiwan-to-China tooling transfer; a new toolset is being made in China instead</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="meeting-card">
+      <div class="meeting-title">Karta-NX Order 143 — Keyboard Tray Width, Magnet Tape Removal, Scanner Bracket, and Packaging</div>
+      <div class="meeting-time">15 Sep 2026 &middot; 1:02 PM GMT+10</div>
+      <div class="attendees">
+        <span class="attendee-chip">Reece Munro</span>
+        <span class="attendee-chip">Ellen (Machan)</span>
+        <span class="attendee-chip">Skye (Machan)</span>
+        <span class="attendee-chip">Matt</span>
+      </div>
+
+      <div class="subsection summary">
+        <h3>Summary</h3>
+        <ul>
+          <li>Production sync with Machan (Ellen, Skye) and Matt covering 4 changes for Order 143 (100 units)</li>
+          <li>Keyboard tray width confirmed at 530mm (reduced from 531mm); Karta will glue plastic slides/spacers in Australia for this shipment, added to BOM for Machan assembly on future orders</li>
+          <li>All tape on keyboard tray magnets (4 tabs) to be removed to restore full magnet strength; QC force tolerance spec needs updating since current spec would fail all units without the tape</li>
+          <li>Sheet metal scanner bracket (Bileader) and its parts bag (Bag B) removed entirely from the BOM; Bags A, C, and D unchanged</li>
+          <li>Cardboard packaging inserts reduced from 95mm to 75mm on both front and back due to the larger heavy-duty LCD mount; separate LCD mount carton no longer required from Machan</li>
+          <li>Casters and drawer runner lead times not yet confirmed but are critical path for Machan assembly before shipping</li>
+          <li>Pinch guard, lock, and palmrest ETA from the China partner still pending; if too tight for Machan, parts will ship direct to Australia for local assembly</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Action Items</h3>
+        <ul class="action-items">
+          <li><span class="owner">Ellen:</span> Send Machan the keyboard tray drawing confirming the 530mm laser-cut width</li>
+          <li><span class="owner">Ellen:</span> Confirm caster and drawer runner lead times within 1-2 days</li>
+          <li><span class="owner">Reece:</span> Confirm ETA for pinch guard, lock, and palmrest from the China partner (share with Machan by 16 Sep)</li>
+          <li><span class="owner">Reece:</span> Send follow-up email to Machan confirming all 4 changes with supporting images</li>
+          <li><span class="owner">Reece:</span> Establish a new magnet force benchmark with the push-pull gauge and update the QC spec before assembly begins</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Key Decisions</h3>
+        <ul class="decision-items">
+          <li>Keyboard tray width confirmed at 530mm for Order 143</li>
+          <li>All magnet tape removed from the keyboard tray to increase magnet strength as the new desired spec</li>
+          <li>Scanner bracket and Parts Bag B removed entirely from the BOM</li>
+          <li>Cardboard inserts reduced from 95mm to 75mm; no separate LCD mount carton needed</li>
+        </ul>
+      </div>
+    </div>
 
   </div>
 
