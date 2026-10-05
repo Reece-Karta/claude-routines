@@ -198,26 +198,68 @@
   <header>
     <h1>Meeting Notes</h1>
     <div class="meta">
-      Karta Healthcare &middot; <span id="export-date">4 Oct 2026</span>
+      Karta Healthcare &middot; <span id="export-date">5 Oct 2026</span>
     </div>
   </header>
 
   <div class="stats">
     <div class="stat-card meetings">
-      <div class="count" id="count-meetings">0</div>
+      <div class="count" id="count-meetings">1</div>
       <div class="label">Meetings</div>
     </div>
     <div class="stat-card actions">
-      <div class="count" id="count-actions">0</div>
+      <div class="count" id="count-actions">5</div>
       <div class="label">Action Items</div>
     </div>
     <div class="stat-card decisions">
-      <div class="count" id="count-decisions">0</div>
+      <div class="count" id="count-decisions">5</div>
       <div class="label">Decisions</div>
     </div>
   </div>
 
-  <div class="empty-state">No meetings recorded today</div>
+  <div class="meeting-section">
+    <div class="meeting-card">
+      <div class="meeting-title">US expansion setup and Odoo multi-company configuration with Junjie</div>
+      <div class="meeting-time">5 Oct 2026, 4:34 PM AEST</div>
+      <div class="attendees">
+        <span class="attendee-chip">Reece Munro</span>
+        <span class="attendee-chip">Junjie</span>
+      </div>
+      <div class="subsection summary">
+        <h3>Summary</h3>
+        <ul>
+          <li>Reece relocating to the US this week (last week in Australia); new Debitrek product manager onboarding; 240 units sold in Sydney, second order of ~220 units pending; manufacturing tooling moving from Taiwan to Shanghai</li>
+          <li>Two entities: Karta Healthcare Pty Ltd (AU) and Karta Healthcare Corporation (US C-Corp, wholly owned by the AU parent) with separate books; profits flow up at P&amp;L level</li>
+          <li>Each company buys directly from its own suppliers (Taiwan/Shanghai); no intercompany transactions planned, though Odoo intercompany automation exists if needed</li>
+          <li>Odoo: one license covers both companies; access managed per company; account kept registered as Australian to avoid higher US pricing; separate warehouse ownership per company (stock moves are permanent, only reversible)</li>
+          <li>US accounting: apply US fiscal localization first (~90% of setup); confirm with CPA cash vs. accrual, inventory valuation (perpetual/periodic, FIFO/average), valuation accounts and journals, tax setup, bank (Chase or Wells Fargo)</li>
+          <li>Chart of accounts: export from MYOB, reformat for Odoo (no dots in codes), import to US company; split income and COGS by product category (carts vs. battery systems)</li>
+          <li>Payroll via Gusto outside Odoo; third-party integration app (~$200) needs security review; a manual journal entry may suffice</li>
+          <li>Support: Junjie has a direct Odoo US contact and a US partner list; local CPA firm (Odoo partner, e-commerce focus) identified, inquiries sent last week; further Odoo training needed once US system is configured</li>
+        </ul>
+      </div>
+      <div class="subsection">
+        <h3>Action Items</h3>
+        <ul class="action-items">
+          <li>Confirm the ~220-unit second order (expected within 1–2 weeks)</li>
+          <li><span class="owner">Reece:</span> Hear back from US CPA firm and engage them to verify chart of accounts, inventory valuation, tax setup and cash vs. accrual</li>
+          <li><span class="owner">Reece:</span> Export AU chart of accounts from MYOB and share with US CPA</li>
+          <li><span class="owner">Reece:</span> Review Gusto–Odoo integration app (~$200) for security and reliability</li>
+          <li><span class="owner">Reece, Junjie:</span> Catch up in person in Brisbane (Junjie there Tue–Thu; Reece's last week in Australia)</li>
+        </ul>
+      </div>
+      <div class="subsection">
+        <h3>Key Decisions</h3>
+        <ul class="decision-items">
+          <li>Run two separate companies with separate books; no intercompany transactions between AU and US</li>
+          <li>Use one Odoo license covering both companies, kept registered as Australian to avoid higher US pricing</li>
+          <li>Start US setup with the US fiscal localization package, with the CPA verifying and adjusting</li>
+          <li>Run payroll outside Odoo via Gusto</li>
+          <li>Run Odoo end-to-end for sales, purchasing, inventory and accounting in the US (no MYOB)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
